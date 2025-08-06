@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  --background: #252525;
   --foreground: #ffffff;
 }
 
@@ -27,5 +27,5 @@ body {
 
 .grad {
   box-shadow: 0px -10px 36px 9px black;
-  background: black;
+  background: #000000;
 }

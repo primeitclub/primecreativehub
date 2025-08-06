@@ -75,7 +75,7 @@ export default function StartField() {
     }, [])
 
     return (
-        <div className="relative w-full h-[40vh] bg-[linear-gradient(#040035_0%,_#000_100%)] overflow-hidden">
+        <div className="relative w-full h-[40vh] bg-[linear-gradient(#040035_0%,_#000000_100%)] overflow-hidden">
             {stars.map((star) => (
                 <motion.div
                     key={star.id}
