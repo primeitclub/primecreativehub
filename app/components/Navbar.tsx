@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,6 +49,12 @@ export default function Navbar() {
               >
                 Contact
               </Link>
+              <Link
+                href="/history"
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-[1.3vw] transition-colors duration-200"
+              >
+                History
+              </Link>
             </div>
           </div>
 
@@ -62,7 +68,7 @@ export default function Navbar() {
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
               <svg
-                className={`${isMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
+                className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -78,7 +84,7 @@ export default function Navbar() {
               </svg>
               {/* Close icon */}
               <svg
-                className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                className={`${isMenuOpen ? "block" : "hidden"} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -98,7 +104,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
+      <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3  bg-black/80 backdrop-blur-md border-t border-white/10">
           <Link
             href="/"
@@ -125,4 +131,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-} 
+}
