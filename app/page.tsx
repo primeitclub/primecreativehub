@@ -6,6 +6,7 @@ import AnimatedText from "./components/AnimatedText";
 import DownSvg from "./components/Down";
 import { FaUsers, FaRegEye } from "react-icons/fa";
 import Bubl from "./components/Bubl";
+import { MdWorkOutline } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -55,17 +56,21 @@ export default function Home() {
               <span>tools</span>
             </p>
 
-            <div className="flex gap-6 mb-8">
+           <div className="flex gap-6 mb-8">
               <button
-                className="bg-white text-black px-8 py-2 rounded-lg text-[1.1vw] shadow transition-all duration-300 hover:bg-transparent hover:text-white hover:border hover:border-white hover:shadow-none hover:font-normal flex items-center gap-2"
+                className="bg-white text-black px-8 py-2 rounded-lg text-[1vw] shadow transition-all duration-300 hover:font-normal flex items-center gap-2 group/icon hover:cursor-pointer"
               >
-                <FaUsers size="1.3em" />
+                <span className="transition-transform duration-300 group-hover/icon:scale-150 group-hover/icon:-translate-x-1.5">
+                  <FaUsers size="1.3em" />
+                </span>
                 Join Club
               </button>
               <button
-                className="border border-white text-white px-8 py-2 rounded-lg text-[1.1vw] bg-transparent transition-all duration-300 hover:bg-white hover:text-black hover:shadow hover:font-semibold flex items-center gap-2"
+                className="border border-white text-white px-8 py-2 rounded-lg text-[1vw] bg-transparent transition-all duration-300 hover:font-semibold flex items-center gap-2 hover:cursor-pointer group/icon"
               >
-                <FaRegEye size="1.3em" />
+                <span className="transition-transform duration-300 group-hover/icon:scale-150 group-hover/icon:-translate-x-1.5">
+                  <MdWorkOutline size="1.3em" />
+                </span>
                 View Works
               </button>
             </div>
