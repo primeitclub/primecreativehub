@@ -5,10 +5,11 @@ import FlowingIcon from "./components/FlowingIcon";
 import AnimatedText from "./components/AnimatedText";
 import DownSvg from "./components/Down";
 import { FaUsers, FaRegEye } from "react-icons/fa";
+import Bubl from "./components/Bubl";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black py-12">
+    <div className="min-h-screen py-12">
       <div className="px-[7vw]">
 
 
@@ -22,18 +23,18 @@ export default function Home() {
 
             <AnimatedText
               text="CREATIVE HUB"
-              className="jery stroke-text tracking-loose text-[14vw] font-bold text-white  block"
+              className="jery stroke-text tracking-loose text-[14vw] font-bold text-white/80  block"
             />
 
             <div className="absolute right-0 -top-[2vw]" >
-              <div className="h-[2vw] w-[2vw]" >
-                <FlowingIcon />
-              </div>
+              <div className="h-4 w-4 sm:h-6 sm:w-6 md:h-[1.1vw] md:w-[1.1vw]">
+                 <Bubl/>
+                </div>
             </div>
 
           </div>
 
-          <div className="absolute bottom-[0vw] left-0 w-full h-[10%] z-10 bg-gray-500 ">
+          <div className="absolute bottom-[0vw] left-0 w-full h-[7%] z-10 bg-[#0B0B0B] ">
             <div className="w-full h-full grad"></div>
           </div>
 

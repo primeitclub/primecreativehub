@@ -29,31 +29,31 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          {/* <div className="hidden md:block">
+          <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 href="/"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-[1.3vw] transition-colors duration-200"
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-[1vw] transition-colors duration-200"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-[1.3vw] transition-colors duration-200"
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-[1vw] transition-colors duration-200"
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-[1.3vw] transition-colors duration-200"
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-[1vw] transition-colors duration-200"
               >
                 Contact
               </Link>
             </div>
-          </div> */}
+          </div>
 
           {/* Mobile menu button */}
-          {/* <div className="md:hidden">
+          <div className="md:hidden">
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -91,7 +91,7 @@ export default function Navbar() {
                 />
               </svg>
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
 

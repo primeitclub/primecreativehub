@@ -35,7 +35,7 @@ export default function StartField() {
                 id: i,
                 x: Math.random() * 100,
                 y: Math.random() * 100,
-                size: Math.random() * 3 + 1, // 1-4px
+                size: Math.random() * 5 + 1, // 1-4px
                 opacity: Math.random() * 0.6 + 0.3, // 0.3-0.9
                 duration: Math.random() * 8 + 6, // 6-14 seconds
             })
@@ -75,7 +75,7 @@ export default function StartField() {
     }, [])
 
     return (
-        <div className="relative w-full h-[40vh] bg-[linear-gradient(#040035_0%,_#000000_100%)] overflow-hidden">
+        <div className="stars_bg relative w-full h-[40vh] overflow-hidden">
             {stars.map((star) => (
                 <motion.div
                     key={star.id}
