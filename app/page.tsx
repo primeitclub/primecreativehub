@@ -5,7 +5,7 @@ import FlowingIcon from "./components/FlowingIcon";
 import AnimatedText from "./components/AnimatedText";
 import DownSvg from "./components/Down";
 import { FaUsers, FaRegEye } from "react-icons/fa";
-
+import History from "./components/History";
 export default function Home() {
   return (
     <div className="min-h-screen bg-black py-12">
@@ -62,6 +62,7 @@ export default function Home() {
             <DownSvg />
           </div>
         </div>
+        <History />
       </div>
     </div>
   );

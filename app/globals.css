@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,200,100,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,200,100,400;0,700;1,400&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -139,4 +139,70 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+@keyframes center-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(var(--rscale, 2.2));
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 1.8s ease-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Slightly smaller ripple on phones */
+@media (max-width: 768px) {
+  .animate-ripple {
+    --rscale: 1.6;
+  }
+}
+/* diagonal white shine that sweeps on hover */
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+.card-shine {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.85),
+    transparent
+  );
+  filter: blur(6px);
+  animation: shine-sweep 1.2s ease-out 1 forwards;
+  /* re-trigger on each hover by using :where on parent */
+}
+.group:hover .card-shine {
+  animation: shine-sweep 1.2s ease-out 1;
 }

@@ -4,8 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Head from "next/head";
 
-import { Jersey_25 } from 'next/font/google';
-
+import { Jersey_25 } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +12,9 @@ const geistSans = Geist({
 });
 
 const jersey = Jersey_25({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-jersey'
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-jersey",
 });
 // ss
 const geistMono = Geist_Mono({
@@ -34,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
@@ -46,12 +45,11 @@ export default function RootLayout({
         />
       </Head>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${jersey.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
