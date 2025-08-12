@@ -21,7 +21,7 @@ export default function Home() {
                 className="jery stroke-text tracking-loose text-6xl sm:text-8xl md:text-[14vw] font-bold text-white block"
               />
 
-              <div className="hidden md:block absolute right-0 -top-2 sm:-top-4 md:-top-[2vw]">
+              <div className="absolute right-0 -top-6 sm:-top-4 md:-top-[2vw]">
                 <div className="h-4 w-4 sm:h-6 sm:w-6 md:h-[1.5vw] md:w-[1.5vw]">
                   <Bulp />
                 </div>
