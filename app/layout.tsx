@@ -52,7 +52,7 @@ export default function RootLayout({
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/svg+xml" />
-
+        <link rel="icon" href="/creativehubfavicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
           rel="stylesheet"
