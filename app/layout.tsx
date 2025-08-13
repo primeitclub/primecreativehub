@@ -61,6 +61,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,200,100,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/creativehubfavicon.ico" />
       </Head>
       <body
         className={`${geistSans.variable} ${jersey.variable} ${geistMono.variable} antialiased`}
