@@ -36,11 +36,4 @@ jobs:
           server: ftp.primeitclub.com
           username: creativehub@creativehub.primeitclub.com
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/.env*
-            **/*.md
-            **/.next
+          local-dir: ./out/
