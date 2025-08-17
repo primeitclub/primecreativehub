@@ -5,6 +5,8 @@ import DownSvg from "./components/Down";
 import { FaUsers, FaRegEye } from "react-icons/fa";
 import Bubl from "./components/Bubl";
 import { MdWorkOutline } from "react-icons/md";
+import StartField from "./components/StartField";
+import CountdownTimer from "./components/CountdownTimer";
 
 export default function Home() {
   return (
