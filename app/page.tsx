@@ -1,7 +1,5 @@
-"use client"
+"use client";
 
-import StartField from "./components/StartField";
-import FlowingIcon from "./components/FlowingIcon";
 import AnimatedText from "./components/AnimatedText";
 import DownSvg from "./components/Down";
 import { FaUsers, FaRegEye } from "react-icons/fa";
@@ -29,8 +27,8 @@ export default function Home() {
 
             <div className="absolute right-0 -top-[2vw]" >
               <div className="h-4 w-4 sm:h-6 sm:w-6 md:h-[1.1vw] md:w-[1.1vw]">
-                 <Bubl/>
-                </div>
+                <Bubl />
+              </div>
             </div>
 
           </div>
@@ -56,7 +54,7 @@ export default function Home() {
               <span>tools</span>
             </p>
 
-           <div className="flex gap-6 mb-8">
+            <div className="flex gap-6 mb-8">
               <button
                 className="bg-white text-black px-8 py-2 rounded-lg text-[1vw] shadow transition-all duration-300 hover:font-normal flex items-center gap-2 group/icon hover:cursor-pointer"
               >
@@ -74,15 +72,17 @@ export default function Home() {
                 View Works
               </button>
             </div>
-
           </div>
 
-          <div className="h-[2vw] w-[2vw]">
-            <DownSvg />
+          {/* Countdown Timer Section */}
+          <div className="flex flex-col items-center justify-center min-h-[1vh] md:min-h-[15vh] xl:min-h-[25vh] relative z-10">
+            <CountdownTimer />
+
+            {/* <div className="mt-8 sm:mt-10 md:mt-12 h-6 w-6 sm:h-8 sm:w-8 md:h-[2vw] md:w-[2vw]">
+                        <DownSvg />
+                    </div> */}
           </div>
         </div>
-
-
       </div>
     </div>
   );
