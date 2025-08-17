@@ -22,9 +22,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Prime Creative Hub",
   description: "Prime Creative Hub is a wing of Prime IT Club.",
-  keywords: "Prime Creative Hub, Prime IT Club, Prime",
+  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime,Creative , Creative Hub",
   icons: {
     icon: '/creativehubfavicon.ico',
+    shortcut: '/creativehubfavicon.ico',
+    apple: '/creativehubfavicon.ico',
+    other: {
+      rel: 'icon',
+      url: '/creativehubfavicon.ico',
+    },
   },
   openGraph: {
     title: "Prime Creative Hub",
@@ -34,8 +40,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://creativehub.primeitclub.com/images/icon.svg",
-        width: 1200,
-        height: 630,
+        width: 200,
+        height: 200,
         alt: "Prime Creative Hub Logo",
         type: "image/svg+xml",
       }
