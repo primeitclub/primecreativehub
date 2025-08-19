@@ -1,0 +1,113 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,200,100,400;0,700;1,400&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap'); 
+
+@import "tailwindcss/preflight"; 
+@import "tailwindcss/utilities"; 
+
+:root {
+  --font-display: 'Mona Sans', sans-serif;
+  --color-title-text: #F8F8FF;
+  --color-sub-text: #f8f8f8;
+  --color-background: #020E0F;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+    background-color: var(--color-background);
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-title-text);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-title-text);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-title-text);
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-title-text);
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    color: var(--color-sub-text);
+  }
+}
+
+@layer utilities {
+  .text-title {
+    color: var(--color-title-text);
+  }
+
+  .text-subtitle {
+    color: var(--color-sub-text);
+  }
+  .shadow-glow {
+    box-shadow:
+      0 0 10px 2px rgba(255, 255, 255, 0.15),
+      inset 0 0 5px 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 2rem 1.5rem;
+  background-color: var(--color-background);
+  color: var(--color-title);
+  font-family: var(--font-display);
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.marquee {
+  display: flex;
+  gap: 1.5rem;
+  white-space: nowrap;
+  align-items: center;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 260px;
+  line-height: 1.5;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
