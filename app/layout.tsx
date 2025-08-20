@@ -1,28 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Jersey_25 } from "next/font/google";
 import "./styles/globals.css";
 import Navbar from "./components/global/navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const jersey = Jersey_25({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-jersey'
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import HeroSection from "./features/hero-section";
 
 export const metadata: Metadata = {
   title: "Prime Creative Hub",
   description: "Prime Creative Hub is a wing of Prime IT Club.",
-  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime,Creative , Creative Hub",
+  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime, Creative, Creative Hub",
   icons: {
     icon: '/creativehubfavicon.ico',
     shortcut: '/creativehubfavicon.ico',
@@ -62,24 +46,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,200,100,400;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body
-        className={`${geistSans.variable} ${jersey.variable} ${geistMono.variable} antialiased`}
-      >
+      <head />
+      <body className="antialiased">
         <Navbar />
-        
-
+        <HeroSection />
+      
         {children}
       </body>
     </html>
-  )
+  );
 }
