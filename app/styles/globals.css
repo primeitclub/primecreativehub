@@ -1,6 +1,4 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
-
+@import "tailwindcss";
 
 :root {
   --font-display: 'Mona Sans', sans-serif;
@@ -8,6 +6,7 @@
   --color-sub-text: #f8f8f8;
   --color-background: #020E0F;
 }
+
 
 @keyframes marquee {
   0% {

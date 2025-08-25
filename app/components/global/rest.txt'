@@ -1,0 +1,40 @@
+  {menuOpen && (
+        <div className="fixed top-[60px] left-0 w-full bg-black/90 backdrop-blur-lg shadow-lg flex flex-col items-center gap-6 py-6 z-40 md:hidden transition-all duration-300">
+          {navItems.map(({ name, href }) => {
+            const isActive = active === name.toLowerCase();
+            return (
+              <Link
+                key={name}
+                href={href}
+                onClick={() => {
+                  setActive(name.toLowerCase());
+                  setMenuOpen(false);
+                }}
+                className={`relative cursor-pointer px-2 py-1 transition duration-300 text-lg font-medium
+                  ${
+                    isActive
+                      ? 'text-[#F8F8FF] font-semibold after:absolute after:-bottom-2 after:left-0 after:w-full after:h-1 after:bg-cyan-400'
+                      : 'text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]'
+                  }
+                `}
+              >
+                {name}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+
+
+
+        <button
+        className="ml-auto md:hidden p-2 focus:outline-none z-50"
+        onClick={() => setMenuOpen((prev) => !prev)}
+        aria-label="Toggle menu"
+      >
+        {menuOpen ? (
+          <HiX className="w-7 h-7 text-white" />
+        ) : (
+          <HiMenu className="w-7 h-7 text-white" />
+        )}
+      </button>

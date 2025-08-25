@@ -58,7 +58,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <Navbar />
-        <HeroSection />
         {children}
       </body>
     </html>

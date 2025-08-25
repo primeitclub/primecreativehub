@@ -17,20 +17,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed z-50 flex items-center bg-black/40 backdrop-blur-md  shadow-md"
-      style={{
-        width: '1000px',
-        height: '60px',
-        top: '30px',
-        left: '400px',
-        paddingLeft: '40px',
-        paddingRight: '78.4px',
-        borderRadius: '20px',
-        gap: '24px',
-      }}
+      className="fixed z-50 flex items-center bg-black/40 backdrop-blur-md shadow-md w-[90vw] max-w-[1000px] h-[60px] top-8 left-1/2 -translate-x-1/2 px-6 md:px-10 rounded-2xl gap-6 md:gap-8"
     >
       {/* Logo */}
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 ">
         <Link href="/">
           <Image
             src="/images/icon.svg"
@@ -43,7 +33,7 @@ export default function Navbar() {
       </div>
 
       {/* Nav Items */}
-      <div className="flex flex-grow justify-center" style={{ gap: '40px' }}>
+      <div className="flex flex-grow justify-center gap-[40px]">
         {navItems.map(({ name, href }) => {
           const isActive = active === name.toLowerCase();
           return (
