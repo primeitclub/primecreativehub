@@ -1,7 +1,14 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import "./styles/globals.css";
 import Navbar from "./components/global/navbar";
 import HeroSection from "./features/hero-section";
+import { Mona_Sans } from 'next/font/google';
+
+const monaSans = Mona_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-display',
+});
 
 export const metadata: Metadata = {
   title: "Prime Creative Hub",
@@ -45,12 +52,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head />
+    <html lang="en" className={monaSans.variable}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className="antialiased">
         <Navbar />
         <HeroSection />
-      
         {children}
       </body>
     </html>

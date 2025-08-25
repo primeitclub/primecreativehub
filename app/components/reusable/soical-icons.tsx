@@ -4,15 +4,15 @@ import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function SocialIcons() {
   return (
-    <div className="flex items-center justify-center gap-[20px] mt-[10px] text-subtitle">
+    <div className="flex items-center justify-center gap-[38px] mt-[14px] text-subtitle">
       <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-        <FaInstagram className="w-[40px] h-[40px]" />
+        <FaInstagram className="social-icon" />
       </a>
       <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-        <FaGithub className="w-[40px] h-[40px]" />
+        <FaGithub className="social-icon" />
       </a>
       <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-        <FaLinkedin className="w-[40px] h-[40px]"/>
+        <FaLinkedin className="social-icon" />
       </a>
     </div>
   );

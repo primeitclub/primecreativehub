@@ -22,7 +22,7 @@ export default function Navbar() {
         width: '1000px',
         height: '60px',
         top: '30px',
-        left: '250px',
+        left: '400px',
         paddingLeft: '40px',
         paddingRight: '78.4px',
         borderRadius: '20px',
