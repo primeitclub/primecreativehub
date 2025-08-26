@@ -12,9 +12,7 @@
   --color-sub-text: #f8f8f8;
   --color-background: #020E0F;
 }
-*{
-  font-family: var(--font-display);
-}
+
 
 @layer base {
   html {
@@ -25,6 +23,7 @@
   h1 {
     font-size: 2rem;
     font-weight: 800;
+    font-family: var(--font-display);
     color: var(--color-title-text);
   }
 

@@ -14,7 +14,7 @@ export default function Card({ title, subtitle, imageUrl, children }: CardProps)
   return (
     <div
       className="
-        group relative w-[286px] h-[286px] overflow-hidden p-[28px]
+        group flex gap-[10px] flex-col items-center justify-center relative w-[286px] h-[286px] overflow-hidden p-[28px]
         border border-white/20 bg-[#1C2727] backdrop-blur-sm
         shadow-[0_0_24px_rgba(255,255,255,0.22)] rounded-[16px]
         hover:shadow-[0_0_40px_rgba(255,255,255,0.35)]
@@ -22,25 +22,25 @@ export default function Card({ title, subtitle, imageUrl, children }: CardProps)
       "
     >
       {imageUrl && (
-        <div className="relative h-40 justify-center items-center w-full overflow-hidden">
+        <div className="relative h-auto justify-center items-center gap-[10px] overflow-hidden">
           <Image
             src={imageUrl}
             alt={title}
-          
-            sizes="100vw"
-            className="object-cover transition-transform duration-300 group-hover:scale-[1.05]"
+            width={100}
+            sizes="70vw"
+            className="object-contain m-auto transition-transform duration-300 group-hover:scale-[1.05]"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/30" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/30" ></div>
         </div>
       )}
 
       <div className="p-4">
-        <h3 className="text-lg font-semibold tracking-tight text-4xl text-white">{title}</h3>
+        <h3 className="text-[28px] font-[600] text-center tracking-tight  text-white">{title}</h3>
         {subtitle && <p className="mt-1 text-sm text-white/70">{subtitle}</p>}
         {children && <div className="mt-3">{children}</div>}
       </div>
 
-      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-white/10" />
+      <div className="none" />
     </div>
   )
 }
