@@ -1,81 +1,65 @@
 'use client';
 
+
 import DropArrow from './components/reusable/downarrow';
 import SecondaryHeader from './components/reusable/secondaryHeader';
 import SocialIcons from './components/reusable/soical-icons';
+import HeroWord from './components/reusable/HeroWord';
 import Image from 'next/image';
 
 export default function Page() {
   return (
-    <div
-      id="home"
-      className="relative h-screen 2xl:max-h-[1080px] flex flex-col overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 sm:py-6 md:py-8 text-title font-display bg-[linear-gradient(180deg,_#020E0F_0%,_rgba(21,_21,_20,_0)_100%,_#020E0F_100%)]"
+    <div id="home" className="home_container relative h-[90vh] flex flex-col overflow-hidden "
     >
-      <div className="flex flex-col items-center justify-center text-center flex-grow px-2 sm:px-4 md:px-6 lg:px-8 bg-lime-500">
-        <div className="hero-words-container">
-          <h1 className="hero-word text-title font-display">
-            <span className="flex items-baseline">
-              Innovate
-              <span className="inline-block text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18x] [color:#0797A0] ml-1">■</span>
-            </span>
-          </h1>
+
+      <div className="flex flex-col items-center justify-center text-center flex-grow gap-2 2xl:gap-6">
+
+        <div className="flex flex-col sm:flex-row items-center justify-center md:gap-4">
           
-          <h1 className="hero-word text-title font-display">
-            <span className="flex items-baseline">
-              Build
-              <span className="inline-block text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] [color:#0797A0] ml-1">■</span>
-            </span>
-          </h1>
-          
-          <h1 className="hero-word text-title font-display">
-            <span className="flex items-baseline">
-              Share
-              <span className="inline-block text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] [color:#0797A0] ml-1">■</span>
-            </span>
-          </h1>
-          
-          <h1 className="bg-red-600 hero-word text-title font-display">
-            <span className="flex items-baseline ">
-              Repeat
-              <span className="inline-block text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] [color:#0797A0] ml-1">■</span>
-            </span>
-          </h1>
+          {['Innovate', 'Build', 'Share', 'Repeat'].map(word => (
+            <HeroWord key={word} word={word} />
+          ))}
+
         </div>
 
-        <div className='!bg-red-500 !text-2xl !text-black' >
-            this is testing 
-        </div>
-
-        <SecondaryHeader className="secondary-header mt-5 sm:mt-3 md:mt-4 lg:mt-6 xl:mt-8 text-white px-2 sm:px-4">
+        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[1.9vw] 2xl:text-[36px] text-white ">
           WING OF PRIME IT CLUB
-        </SecondaryHeader>
+        </div>
 
-        <div className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-16">
+        <div className="mt-4">
           <SocialIcons />
         </div>
+
       </div>
 
-      <DropArrow className="down-arrow absolute top-[80%] sm:top-[82%] md:top-[85%] lg:top-[87%] left-1/2 -translate-x-1/2" />
+  {/* <DropArrow className="inline-flex p-[5px] gap-[5px] lg:p-[10px] lg:gap-[10px] items-center absolute top-[80%] sm:top-[82%] md:top-[85%] lg:top-[87%] left-1/2 -translate-x-1/2" /> */}
 
       {/* Slider */}
-      {/* <div className="marquee-wrapper mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10">
-        <div className="marquee">
-          {Array.from({ length: 16 }).map((_, index) => (
-            <span key={index} className="marquee-item flex items-center space-x-2 sm:space-x-3 md:space-x-4">
-              <Image 
-                src="/images/icon.svg" 
-                alt="Logo" 
-                width={40} 
-                height={40} 
-                className="icon-responsive"
-              />
-              <span className='scrollable-text whitespace-nowrap'>
+     <div className='absolute bottom-0 left-0' >
+        <div className='relative' >
+          <div className="overflow-hidden py-4 relative mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10">
+            <div className="inline-flex gap-0 md:gap-12 lg:gap-16 text-white/80 whitespace-nowrap items-center animate-[marquee_20s_linear_infinite]">
+              {Array.from({ length: 16 }).map((_, index) => (
+                <span key={index} className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8">
+                  <div className='relative w-4 h-4 md:w-5 md:h-5 lg:w-8 lg:h-8' >
+                 <Image 
+                  src="/images/icon.svg" 
+                  alt="Logo" 
+                  fill
+                  className="flex  justify-center items-center aspect-square"
+                 />
+                </div>
+              <span className='font-semibold text-[12px] lg:text-[18px] whitespace-nowrap'>
                 Where Creativity Meets Innovation.
               </span>
             </span>
           ))}
         </div>
-      </div> */}
-    </div>
+      </div>
+      </div>
+     </div>
+     
+      </div>
+
   );
 }

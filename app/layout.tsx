@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import "./styles/globals.css";
 import Navbar from "./components/global/navbar";
-import HeroSection from "./features/hero-section";
 import { Mona_Sans } from 'next/font/google';
 
 const monaSans = Mona_Sans({
