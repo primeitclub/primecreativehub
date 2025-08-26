@@ -6,7 +6,7 @@ import Image, { StaticImageData } from 'next/image'
 type CardProps = {
   title: string
   subtitle?: string
-  imageUrl?: string | StaticImageData
+  imageUrl?: any
   children?: React.ReactNode
 }
 
@@ -22,11 +22,11 @@ export default function Card({ title, subtitle, imageUrl, children }: CardProps)
       "
     >
       {imageUrl && (
-        <div className="relative h-40 w-full overflow-hidden">
+        <div className="relative h-40 justify-center items-center w-full overflow-hidden">
           <Image
             src={imageUrl}
             alt={title}
-            fill
+          
             sizes="100vw"
             className="object-cover transition-transform duration-300 group-hover:scale-[1.05]"
           />

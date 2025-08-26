@@ -18,13 +18,13 @@ export default function About() {
                 <p className="text-[20px] font-[500] ">Creative Hub empowers students to explore design, collaborated on multimedia projects, and innovate through creative expression, all as part of Prime IT Club's mission to shape the future of technology and creativity.</p>
                 </div>
 
-            <div className="my-[64px] grid grid-cols-3 gap-4" > 
-                <SmallCard title="Develop" />
-                <SmallCard title="Innovate" />
-                <SmallCard title="Collaborate" />
-                <SmallCard title="WorkShop" />
-                <SmallCard title="Knowledge Sharing Session" />
-                <SmallCard title="Mentor" />
+            <div className="my-[64px]  grid-cols-3 grid gap-1" > 
+                <SmallCard imageUrl={assets.developIcon} title="Develop" />
+                <SmallCard imageUrl={assets.innovateIcon}  title="Innovate" />
+                <SmallCard imageUrl={assets.collaborateIcon} title="Collaborate" />
+                <SmallCard imageUrl={assets.workshopIcon} title="WorkShop" />
+                <SmallCard imageUrl={assets.knowledgeIcon} title="Knowledge Sharing Session" />
+                <SmallCard imageUrl={assets.mentorIcon} title="Mentor" />
                 
             </div>
             <button  className=" flex p-[12px] m-auto w-[120px] rounded-[16px] justify-center align-middle p-2 border border-solid border-[#0797A0]"> View More</button>

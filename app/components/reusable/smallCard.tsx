@@ -6,7 +6,7 @@ import Image, { StaticImageData } from 'next/image'
 type Smallprops = {
     title?: string,
     subtitle?: string,
-    imageUrl?: string | StaticImageData,
+    imageUrl?: any,
     children?: React.ReactNode
 }
 
@@ -18,7 +18,7 @@ export default function SmallCard({ title, imageUrl, children }: Smallprops) {
                     <Image
                         src={imageUrl}
                         alt={title || "image"}
-                        fill
+                        width={40} height={40}
                         sizes="64px"
                         className="object-contain"
                     />
