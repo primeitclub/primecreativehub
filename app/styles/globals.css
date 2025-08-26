@@ -12,6 +12,9 @@
   --color-sub-text: #f8f8f8;
   --color-background: #020E0F;
 }
+*{
+  font-family: var(--font-display);
+}
 
 @layer base {
   html {

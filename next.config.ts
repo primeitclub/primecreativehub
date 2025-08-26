@@ -8,9 +8,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // images: {
-  //   unoptimized: false,
-  // },
+  images: {
+    unoptimized: true,
+  },
   // async redirects() {
   //   return [
   //     {

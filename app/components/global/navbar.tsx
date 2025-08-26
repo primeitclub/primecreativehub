@@ -16,11 +16,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed z-50 flex items-center bg-black/40 backdrop-blur-md border border-white/30 shadow-md"
+      className="fixed 
+      z-50 flex items-center bg-black/40 backdrop-blur-md 
+      border border-white/30 shadow-md "
       style={{
         width: '650px',
         height: '40px',
-        top: '30px',
+        top: '10px',
         left: '110px',
         paddingLeft: '40px',
         paddingRight: '78.4px',
