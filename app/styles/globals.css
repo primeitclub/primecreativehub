@@ -16,7 +16,7 @@
 
 @layer base {
   html {
-    font-family: var(--font-display);
+    font-family: var(--font-display) !important;
     background-color: var(--color-background);
   }
 
