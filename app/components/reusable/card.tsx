@@ -1,7 +1,7 @@
 "use client"
 
 import type React from 'react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 type CardProps = {
   title: string
@@ -27,6 +27,7 @@ export default function Card({ title, subtitle, imageUrl, children }: CardProps)
             src={imageUrl}
             alt={title}
             width={100}
+            height={100}
             sizes="70vw"
             className="object-contain m-auto transition-transform duration-300 group-hover:scale-[1.05]"
           />

@@ -1,4 +1,4 @@
-import assets from "../assets/assets";
+import assets from "../../assets/assets";
 import Card from "../reusable/card";
 import SmallCard from "../reusable/smallCard";
 
