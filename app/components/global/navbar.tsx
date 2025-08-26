@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="relative z-50 flex items-center w-full h-[60px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8"
+      className="fixed z-50 flex items-center w-full h-[60px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8"
     >
       {/* Logo */}
       <div className="relative w-[40px] h-[40px] md:w-[45px] md:h-[45px]">

@@ -134,4 +134,14 @@ body , nav {
 }
 
 
+.bg-grads{
+ background:conic-gradient( from 0.25turn at 54% 85%, #00000081, 157deg, #00b4b43d, 352deg, #00B4B4 )
+}
 
+.bg_top_graident {
+  background: linear-gradient(180deg,rgba(2, 14, 15, 1) 1%, rgba(21, 21, 20, 0.18) 100%);
+}
+
+/* conic-gradient( from 0.25turn at 54% 85%, #00000081, 87deg, #1b6f9336, 343deg, #11bae1 ) */
+
+ /* background:conic-gradient( from 0.25turn at 54% 85%, #00000081, 184deg, #1b6f9336, 346deg, #11bae1 ) */
