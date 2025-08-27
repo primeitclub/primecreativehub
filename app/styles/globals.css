@@ -13,14 +13,14 @@ body , nav {
   margin: auto;
 }
 
-/* @keyframes marquee {
+@keyframes marquee {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
-} */
+}
 
 @layer base {
   html {
@@ -110,7 +110,7 @@ body , nav {
   gap: 0rem;
   white-space: nowrap;
   align-items: center;
-  animation: marquee 20s linear infinite;
+  animation: marquee 80s linear infinite;
 }
 
 @media (min-width: 768px) {

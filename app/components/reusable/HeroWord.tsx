@@ -8,9 +8,10 @@ const HeroWord: React.FC<HeroWordProps> = ({ word }) => (
   <h1 className="flex items-center justify-center font-extrabold text-[40px] md:text-[5vw] sm:text-[6vw] xl:text-[4.5vw] 2xl:text-[88px]">
     <span className="flex items-baseline">
       {word}
-      <span className="inline-block text-[8px] md:text-[10px] xl:text-[12px] text-[#0797A0] ml-1">■</span>
+      <span className="inline-block text-[12px] md:text-[14px] xl:text-[16px] text-[#0797A0] ml-1">■</span>
     </span>
   </h1>
 );
 
 export default HeroWord;
+ 
