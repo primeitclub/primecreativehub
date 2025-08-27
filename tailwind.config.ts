@@ -1,18 +1,19 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-    content: [
-        './pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './components/**/*.{js,ts,jsx,tsx,mdx}',
-        './app/**/*.{js,ts,jsx,tsx,mdx}',
-    ],
-    theme: {
-        extend: {
-            fontFamily: {
-                'jersey': ['Jersey 25', 'sans-serif'],
-            },
-        },
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['var(--font-display)'], 
+      },
     },
-    plugins: [],
+  },
+  plugins: [],
 }
-export default config 
+
+export default config

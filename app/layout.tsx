@@ -1,28 +1,18 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Jersey_25 } from "next/font/google";
+import { Metadata } from "next";
 import "./styles/globals.css";
 import Navbar from "./components/global/navbar";
+import { Mona_Sans } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const jersey = Jersey_25({
+const monaSans = Mona_Sans({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-jersey'
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-display',
 });
 
 export const metadata: Metadata = {
   title: "Prime Creative Hub",
   description: "Prime Creative Hub is a wing of Prime IT Club.",
-  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime,Creative , Creative Hub",
+  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime, Creative, Creative Hub",
   icons: {
     icon: '/creativehubfavicon.ico',
     shortcut: '/creativehubfavicon.ico',
@@ -61,25 +51,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={monaSans.variable}>
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,200,100,400;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body
-        className={`${geistSans.variable} ${jersey.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <Navbar />
-        
-
         {children}
       </body>
     </html>
-  )
+  );
 }
