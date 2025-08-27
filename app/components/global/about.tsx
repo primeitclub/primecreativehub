@@ -27,7 +27,7 @@ export default function About() {
                 <SmallCard imageUrl={assets.mentorIcon} title="Mentor" />
                 
             </div>
-            <button  className=" flex p-[12px] m-auto w-[120px] rounded-[10px] justify-center align-middle p-2 border border-solid border-[#0797A0]"> View More</button>
+            <button  className=" flex p-[12px] m-auto w-[120px] rounded-[10px] justify-center align-middle  border border-solid border-[#0797A0]"> View More</button>
         </div >
 
        </div>
