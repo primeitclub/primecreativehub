@@ -6,7 +6,7 @@ import DataFlowConnector from "./DataFlowConnector";
 
 export default function About() {
   return (
-    <div className="w-full relative py-16 px-10 overflow-hidden sm:px-10 lg:px-20">
+    <div className="w-full relative py-[8vw] px-10 overflow-hidden sm:px-10 lg:px-20">
       {/* Heading for large screens */}
       <div className="flex lg:hidden justify-center mb-12">
         <h3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center">
@@ -17,24 +17,28 @@ export default function About() {
 
       {/* Responsive main flex layout */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-28">
-        
+
         {/* Cards Section */}
-        <div className="flex sm:flex-col flex-row   gap-8 w-full lg:w-1/3">
-          <Card
-            title="Prime IT Club"
-            imageUrl={assets.ItclubLogo}
-            subtitle="Promising Future"
-            iwidth="94"
-            iheight="41"
-          />
-          <DataFlowConnector />
-          <Card
-            title=" Prime Creative Hub"
-            imageUrl={assets.CreativeLogo}
-            iwidth="94"
-            iheight="41"
-            subtitle="Wing of the Prime Club"
-          />
+        <div className="w-full lg:w-1/3">
+          <div className="relative flex sm:flex-col flex-row gap-8  w-[276px] h-[60vh] m-auto " >
+            <Card
+              title="Prime IT Club"
+              imageUrl={assets.ItclubLogo}
+              subtitle="Promising Future"
+              iwidth={94}
+              iheight={41}
+              className="absolute w-full top-0"
+            />
+            <DataFlowConnector className="top-[27%] -z-1" />
+            <Card
+              title=" Prime Creative Hub"
+              imageUrl={assets.CreativeLogo}
+              iwidth={94}
+              iheight={41}
+              className="absolute w-full bottom-0"
+              subtitle="Wing of the Prime Club"
+            />
+          </div>
         </div>
 
         {/* Info + Small Cards Section */}
@@ -46,7 +50,7 @@ export default function About() {
               <span className="text-[#0797A0]">What</span> We Do
             </h2>
             <p className="text-base sm:text-lg md:text-xl font-normal text-gray-300">
-            A wing of Prime IT Club, driving innovation through knowledge sharing and collaboration.
+              A wing of Prime IT Club, driving innovation through knowledge sharing and collaboration.
             </p>
           </div>
 

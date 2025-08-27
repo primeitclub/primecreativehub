@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useId } from "react"
 
 interface DataFlowConnectorProps {
   /** Height of the animation container in pixels */
@@ -35,8 +36,9 @@ export default function DataFlowConnector({
     height: `${height}px`,
   }
 
-  const gradientId = `flowGradient-${Math.random().toString(36).substr(2, 9)}`
-  const glowId = `glow-${Math.random().toString(36).substr(2, 9)}`
+  const uniqueId = useId()
+  const gradientId = `flowGradient-${uniqueId}`
+  const glowId = `glow-${uniqueId}`
 
   return (
     <div className={`relative w-full overflow-hidden ${className}`} style={containerStyle}>
