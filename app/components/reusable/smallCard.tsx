@@ -15,12 +15,13 @@ export default function SmallCard({ title, imageUrl, children }: Smallprops) {
         <div className="my-[10px]  relative border px-[12px] py-[8px]  gap-[10px]  rounded-[16px] bg-transparent border-[#0797A0] overflow-hidden flex flex-col items-center opacity-90 justify-center"> 
         <div className=' after:bg-white z-[-1] after:opacity-20 after:top-0 after:left-0 after:blur-2xl  after:absolute after:w-full after:h-full '></div>
             {imageUrl ? (
-                <div className="relative justify-center flex w-16 h-16 ">
+                <div className="relative justify-center flex w-8 h-8 ">
                     <Image
                         src={imageUrl}
                         alt={title || "image"}
-                        width={40} height={40}
-                        sizes="64px"
+                    
+                      
+                        fill
                         className="object-contain"
                     />
                 </div>

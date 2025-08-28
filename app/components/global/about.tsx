@@ -6,7 +6,7 @@ import DataFlowConnector from "./DataFlowConnector";
 
 export default function About() {
   return (
-    <div className="w-full relative py-[8vw] px-10 overflow-hidden sm:px-10 lg:px-20">
+    <div className="w-full relative py-[8vw]  px-[20vw] overflow-hidden sm:gap-[191px] m-auto sm:px-10 lg:px-20">
       {/* Heading for large screens */}
       <div className="flex lg:hidden justify-center mb-12">
         <h3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center">
@@ -16,33 +16,37 @@ export default function About() {
       </div>
 
       {/* Responsive main flex layout */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-28">
+      <div className="flex flex-col lg:flex-row  lg:items-start gap-12 lg:gap-28">
 
         {/* Cards Section */}
-        <div className="w-full lg:w-1/3">
-          <div className="relative flex sm:flex-col flex-row gap-8  w-[276px] h-[60vh] m-auto " >
+        <div className="w-full h-auto flex justify-center gap-12 items-center lg:w-1/3">
+          <div className="relative flex flex-row justify-center items-center  sm:flex-row  lg:flex-col   w-full h-[60vh]  m-auto" >
             <Card
               title="Prime IT Club"
               imageUrl={assets.ItclubLogo}
               subtitle="Promising Future"
               iwidth={94}
+             
               iheight={41}
-              className="absolute w-full top-0"
+           
+              className="absolute w-72 top-0"
             />
-            <DataFlowConnector className="top-[27%] -z-1" />
+            <DataFlowConnector className=" z-[-1]" />
             <Card
               title=" Prime Creative Hub"
               imageUrl={assets.CreativeLogo}
-              iwidth={94}
-              iheight={41}
-              className="absolute w-full bottom-0"
+              iwidth={70}
+             
+              iheight={70} 
+             
+              className=" absolute w-72 bottom-0 "
               subtitle="Wing of the Prime Club"
             />
           </div>
         </div>
 
         {/* Info + Small Cards Section */}
-        <div className="flex flex-col gap-8 w-full lg:w-2/3">
+        <div className="flex flex-col sm:px-[30px] gap-8 w-full lg:w-2/3">
           {/* Heading for mobile */}
           <div>
             <h2 className="hidden lg:block text-3xl sm:text-4xl md:text-5xl font-bold text-[#F8F8FF] mb-4">
@@ -55,7 +59,7 @@ export default function About() {
           </div>
 
           {/* Small Cards Grid */}
-          <div className="my-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="my-6 grid left-0 grid-cols-2 sm:grid-cols-3 gap-6 px-20">
             <SmallCard imageUrl={assets.developIcon} title="Develop" />
             <SmallCard imageUrl={assets.innovateIcon} title="Innovate" />
             <SmallCard imageUrl={assets.collaborateIcon} title="Collaborate" />
