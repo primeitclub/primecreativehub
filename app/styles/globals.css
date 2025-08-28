@@ -7,20 +7,51 @@
   --color-background: #020E0F;
 }
 
-body , nav {
+body,
+nav {
   max-width: 1980px;
   width: 100%;
   margin: auto;
 }
 
-/* @keyframes marquee {
+.shiny-text {
+  color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+
+
+
+@keyframes marquee {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
-} */
+}
 
 @layer base {
   html {
@@ -75,7 +106,7 @@ body , nav {
 
   .home_container {
     padding-left: 10%;
-    padding-right:10%;
+    padding-right: 10%;
   }
 }
 
@@ -110,7 +141,7 @@ body , nav {
   gap: 0rem;
   white-space: nowrap;
   align-items: center;
-  animation: marquee 20s linear infinite;
+  animation: marquee 80s linear infinite;
 }
 
 @media (min-width: 768px) {
@@ -125,6 +156,13 @@ body , nav {
   }
 }
 
+@media (min-width:2300px){
+  .home_container {
+    height:1100px !important; 
+  }
+}
+
+
 .marquee-item {
   display: flex;
   align-items: center;
@@ -134,14 +172,14 @@ body , nav {
 }
 
 
-.bg-grads{
- background:conic-gradient( from 0.25turn at 54% 85%, #00000081, 157deg, #00b4b43d, 352deg, #00B4B4 )
+.bg-grads {
+  background: conic-gradient(from 0.25turn at 54% 85%, #00000081, 157deg, #00b4b43d, 352deg, #00B4B4)
 }
 
 .bg_top_graident {
-  background: linear-gradient(180deg,rgba(2, 14, 15, 1) 1%, rgba(21, 21, 20, 0.18) 100%);
+  background: linear-gradient(180deg, rgba(2, 14, 15, 1) 1%, rgba(21, 21, 20, 0.18) 100%);
 }
 
 /* conic-gradient( from 0.25turn at 54% 85%, #00000081, 87deg, #1b6f9336, 343deg, #11bae1 ) */
 
- /* background:conic-gradient( from 0.25turn at 54% 85%, #00000081, 184deg, #1b6f9336, 346deg, #11bae1 ) */
+/* background:conic-gradient( from 0.25turn at 54% 85%, #00000081, 184deg, #1b6f9336, 346deg, #11bae1 ) */

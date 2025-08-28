@@ -1,41 +1,69 @@
 import assets from "../../assets/assets";
 import Card from "../reusable/card";
 import SmallCard from "../reusable/smallCard";
+import DataFlowConnector from "./DataFlowConnector";
+
 
 export default function About() {
-    return (
-      <div className="w-ful relative py-[100px]">
-       {/* <div className="flex justify-center m-10px items-center"><h3 className="text-[80px] font-[800] font-mona">What we do ?</h3></div> */}
-
-       <div className="flex  w-full item-center   gap-[346px] px-[100px] ">
-       <div className="flex flex-col gap-[90px]">
-           <Card title="Prime It Club" imageUrl={assets.ItclubLogo} subtitle="Promising Future"  />
-           <Card title="Creative Hub" imageUrl={assets.CreativeLogo} subtitle="Wing of the Prime Club"  />
-
-        </div>
-        <div className="flex gap-[10px]   flex-col ">
-            <div > <h2 className="text-[64px] font-[700]  text-[#F8F8FF] ">What we do?</h2>
-                <p className="text-[20px] font-[400] ">Creative Hub empowers students to explore design, collaborated on multimedia projects, and innovate through creative expression, all as part of Prime IT Club's mission to shape the future of technology and creativity.</p>
-                </div>
-
-            <div className="my-[24px] grid   grid-cols-3 p-[20px] " > 
-                <SmallCard imageUrl={assets.developIcon} title="Develop" />
-                <SmallCard imageUrl={assets.innovateIcon}  title="Innovate" />
-                <SmallCard imageUrl={assets.collaborateIcon} title="Collaborate" />
-                <SmallCard imageUrl={assets.workshopIcon} title="WorkShop" />
-                <SmallCard imageUrl={assets.knowledgeIcon} title="Knowledge Sharing Session" />
-                <SmallCard imageUrl={assets.mentorIcon} title="Mentor" />
-                
-            </div>
-            <button  className=" flex p-[12px] m-auto w-[120px] rounded-[10px] justify-center align-middle p-2 border border-solid border-[#0797A0]"> View More</button>
-        </div >
-
-       </div>
-       <div className="absolute w-[280px] h-[280px] inset-0 bg-gradient-to-br from-[#0f172a] via-[#216de7] to-[#0a0f16] -z-10" >
-
-       </div>
-        
+  return (
+    <div className="w-full relative py-[8vw] overflow-hidden sm:gap-[191px] m-auto px-4 sm:px-10 lg:px-20">
+      {/* Heading for large screens */}
+      <div className="flex lg:hidden justify-center mb-12">
+        <h3 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center ">
+          <span className="text-[#0797A0]">Who</span> We Are & <br></br>
+          <span className="text-[#0797A0]">What</span> We Do
+        </h3>
       </div>
 
-    )
+      {/* Responsive main flex layout */}
+      <div className="flex flex-col lg:flex-row lg:items-start gap-24 lg:gap-28 px-0 xl:px-[8%] 2xl:px-[15%] py-10 lg:py-0">
+
+        {/* Cards Section */}
+        <div className="w-full  flex justify-center gap-12 items-center lg:w-1/3 ">
+          <div className="relative flex justify-between lg:justify-center items-center lg:flex-col w-full m-auto" >
+            <Card
+              title="Prime IT Club"
+              imageUrl={assets.ItclubLogo}
+              subtitle="Promising Future"
+              className="relative"
+            />
+            <DataFlowConnector className="scale-[0.6] sm:scale-100 -rotate-90 lg:rotate-0 absolute lg:relative lg:bottom-[44px] z-[-1]" />
+            <Card
+              title=" Prime Creative Hub"
+              imageUrl={assets.CreativeLogo}
+              className=" relative bottom-[0px] lg:bottom-[84px]"
+              subtitle="Wing of the Prime Club"
+            />
+          </div>
+        </div>
+
+        {/* Info + Small Cards Section */}
+        <div className="flex flex-col gap-4 w-full lg:w-2/3 ">
+          {/* Heading for mobile */}
+            <h2 className="hidden lg:block text-3xl sm:text-4xl md:text-5xl font-bold text-[#F8F8FF] mb-4 leading-14">
+              <span className="text-[#0797A0]">Who</span> We Are & <br />
+              <span className="text-[#0797A0]">What</span> We Do
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl font-normal text-gray-300">
+              A wing of Prime IT Club, driving innovation through knowledge sharing and collaboration.
+            </p>
+
+          {/* Small Cards Grid */}
+          <div className="md:my-14 grid left-0 grid-cols-2 sm:grid-cols-3 gap-8 md:gap-4 md:p-0 p-6">
+            <SmallCard className="" imageUrl={assets.developIcon} title="Develop" />
+            <SmallCard className="" imageUrl={assets.innovateIcon} title="Innovate" />
+            <SmallCard className="" imageUrl={assets.collaborateIcon} title="Collaborate" />
+            <SmallCard className="" imageUrl={assets.workshopIcon} title="WorkShop" />
+            <SmallCard className="" imageUrl={assets.knowledgeIcon} title="Knowledge" />
+            <SmallCard className="" imageUrl={assets.mentorIcon} title="Mentor" />
+          </div>
+
+        </div>
+      </div>
+
+      {/* Background Circle */}
+      <div className="absolute w-56 h-56 left-[-50px] top-[150px] lg:w-72 lg:h-72  m-auto bg-gradient-to-br from-[#0f172a] via-[#0797A0] to-[#0a0f16] rounded-full blur-[125px] -z-10"></div>
+      <div className="absolute w-56 h-56 right-[-50px] top-[150px] lg:w-72 lg:h-72  m-auto bg-gradient-to-br from-[#0f172a] via-[#0797A0] to-[#0a0f16] rounded-full blur-[125px] -z-10"></div>
+    </div>
+  );
 }

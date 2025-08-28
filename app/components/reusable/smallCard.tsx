@@ -7,28 +7,28 @@ type Smallprops = {
     title?: string,
     subtitle?: string,
     imageUrl?: any,
+    className?: string,
     children?: React.ReactNode
 }
 
-export default function SmallCard({ title, imageUrl, children }: Smallprops) {
+export default function SmallCard({ title, imageUrl, children, className }: Smallprops) {
     return (
-        <div className="my-[10px]  border p-[20px] w-[210px] h-[140px] gap-[1px] rounded-[16px] bg-[#1C2727] border-[#0797A0] flex flex-col items-center justify-center"> 
+        <div className={` ${className} relative border px-[12px] py-[8px] gap-8 rounded-[16px] bg-[#1C2727] border-[#0797A0] overflow-hidden flex flex-col items-center opacity-90 justify-center pt-6 sm:pb-10 pb-6`}>
             {imageUrl ? (
-                <div className="relative w-16 h-16 ">
+                <div className="relative justify-center flex w-8 h-8 sm:w-10 sm:h-10 ">
                     <Image
                         src={imageUrl}
                         alt={title || "image"}
-                        width={40} height={40}
-                        sizes="64px"
+                        fill
                         className="object-contain"
                     />
                 </div>
             ) : (
                 <div className="w-16 h-16 mb-2 flex items-center justify-center">
-                    <div className="w-8 h-8 bg-[#0797A0] rounded-full opacity-50"></div>
+                    <div className="w-8 h-8 bg-[#0797A0] rounded-full "></div>
                 </div>
             )}
-            <p className="text-[18px] font-medium text-center text-white">{title}</p>
+            <p className="sm:text-md text-sm font-medium text-center text-white">{title}</p>
             {children}
         </div>
     )
