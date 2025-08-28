@@ -17,7 +17,7 @@ export default function HeroSection() {
 
       <div className="relative z-20 flex flex-col items-center justify-center text-center flex-grow gap-2 2xl:gap-4">
 
-        <div className="flex flex-col sm:flex-row items-center justify-center md:gap-4 ">
+         <div className="flex flex-col sm:flex-row items-center justify-center md:gap-4">
           {['Innovate', 'Build', 'Share', 'Repeat'].map(word => (
             <HeroWord key={word} word={word} />
           ))}
