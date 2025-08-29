@@ -7,6 +7,10 @@
   --color-background: #020E0F;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 nav {
   max-width: 1980px;
@@ -43,15 +47,24 @@ nav {
 }
 
 
-
+/* 
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+  25%{
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75%{
+    transform: translateX(-75%);
+  }
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 @layer base {
   html {
