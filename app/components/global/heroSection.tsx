@@ -1,8 +1,10 @@
+
 import React from 'react'
 import SocialIcons from '../reusable/soical-icons'
 import HeroWord from '../reusable/HeroWord'
 import Image from 'next/image'
 import DropArrow from '../reusable/downarrow'
+import { motion } from 'framer-motion'
 
 export default function HeroSection() {
   return (
@@ -33,31 +35,40 @@ export default function HeroSection() {
 
       </div>
 
-  <DropArrow className="inline-flex p-[5px] gap-[5px] lg:p-[10px] lg:gap-[10px] items-center absolute top-[80%] sm:top-[82%] md:top-[85%] lg:top-[87%] left-1/2 -translate-x-1/2" />
-
       {/* Slider */}
-     <div className='absolute bottom-0 left-0 py-6' >
-        <div className='relative z-20' >
-          <div className="overflow-hidden py-4 relative mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10">
-            <div className="inline-flex gap-0 md:gap-12 lg:gap-16 text-white whitespace-nowrap items-center animate-[marquee_20s_linear_infinite]">
-              {Array.from({ length: 16 }).map((_, index) => (
-                <span key={index} className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8">
-                  <div className='relative w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6' >
-                 <Image 
-                  src="/images/icon.svg" 
-                  alt="Logo" 
-                  fill
-                  className="flex  justify-center items-center aspect-square"
-                 />
-                </div>
-              <span className='font-semibold text-[12px] lg:text-[16px] whitespace-nowrap'>
-                Where Creativity Meets Innovation.
-              </span>
-            </span>
-          ))}
-        </div>
-      </div>
-      </div>
+     {/* Infinite Marquee Effect */}
+     <div className='absolute bottom-0 left-0 py-6 w-full' >
+       <div className='relative z-20'>
+         <div className="overflow-hidden py-4 relative mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 w-full">
+           <motion.div
+             className="flex gap-0 md:gap-12 lg:gap-16 text-white whitespace-nowrap items-center"
+             style={{ minWidth: '200%', width: '200%' }}
+             animate={{ x: ["0%", "-50%"] }}
+             transition={{ repeat: Infinity, duration: 22.9 , ease: "linear" }}
+           >
+             {[...Array(2)].map((_, loopIdx) => (
+               <React.Fragment key={loopIdx}>
+                 {Array.from({ length: 18 }).map((_, index) => (
+                   <span key={loopIdx + '-' + index} className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8">
+                     <div className='relative w-6 h-6 overflow-visible flex-shrink-0'>
+                       <Image 
+                         src="/images/icon.svg" 
+                         alt="Logo" 
+                         fill
+                         sizes="24px"
+                         className="object-contain"
+                       />
+                     </div>
+                     <span className='font-semibold text-[12px] lg:text-[16px] whitespace-nowrap'>
+                       Where Creativity Meets Innovation.
+                     </span>
+                   </span>
+                 ))}
+               </React.Fragment>
+             ))}
+           </motion.div>
+         </div>
+       </div>
      </div>
      
       </div>
