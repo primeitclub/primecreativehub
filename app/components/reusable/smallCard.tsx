@@ -15,7 +15,7 @@ export default function SmallCard({ title, imageUrl, children, className }: Smal
     return (
         <div className={` ${className} relative border px-[12px] gap-6 rounded-[16px] bg-[#1C2727] border-[#0797A0] overflow-hidden flex flex-col items-center opacity-90 justify-center pt-4 sm:pb-2 pb-6 lg:h-[145px] 2xl:h-[170px]`}>
             {imageUrl ? (
-                <div className="relative justify-center flex w-8 h-8 sm:w-8 sm:h-8 ">
+                <div className="relative justify-center flex w-8 h-8 2xl:w-10 2xl:h-10 ">
                     <Image
                         src={imageUrl}
                         alt={title || "image"}
@@ -28,7 +28,7 @@ export default function SmallCard({ title, imageUrl, children, className }: Smal
                     <div className="w-8 h-8 bg-[#0797A0] rounded-full "></div>
                 </div>
             )}
-            <p className="2xl:text-[16px] md:text-[16px] text-sm font-medium text-center text-white leading-6">{title}</p>
+            <p className="2xl:text-[17px] md:text-[16px] text-sm font-medium text-center text-white leading-6">{title}</p>
             {children}
         </div>
     )
