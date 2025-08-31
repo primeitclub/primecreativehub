@@ -16,7 +16,7 @@ export default function About() {
       </div>
 
       {/* Responsive main flex layout */}
-  <div className="flex flex-col lg:flex-row items-stretch gap-24 lg:gap-28 px-0 xl:px-[8%] 2xl:px-[15%] py-10 lg:py-0  min-h-[500px]">
+  <div className="flex flex-col lg:flex-row items-stretch gap-24 md:gap-18 2xl:gap-28  xl:px-[0] 2xl:px-[8%] py-10 lg:py-0  min-h-[500px]">
 
         {/* Cards Section */}
   <div className="w-full lg:w-1/3 ">
@@ -27,7 +27,7 @@ export default function About() {
               subtitle="Processing Future"
               className="relative"
             />
-            <DataFlowConnector className="scale-[0.6] sm:scale-100 -rotate-90 lg:rotate-0 absolute lg:absolute lg:top-[30%] z-[-1]" />
+            <DataFlowConnector className="scale-[0.6] sm:scale-100 -rotate-90 lg:rotate-0 absolute lg:absolute lg:top-[27%] 2xl:top-[30%] z-[-1]" />
             <Card
               title=" Prime Creative Hub"
               imageUrl={assets.CreativeLogo}
@@ -38,18 +38,18 @@ export default function About() {
  </div>
 
         {/* Info + Small Cards Section */}
-  <div className="flex flex-col gap-4 w-full lg:w-2/3 h-fit ">
+  <div className="flex flex-col gap-2 2xl:gap-4 w-full lg:w-2/3 h-fit 2xl:pr-0 lg:pr-10 md:pr-0">
           {/* Heading for mobile */}
-            <h2 className="hidden lg:block text-3xl sm:text-4xl md:text-[64px] font-bold text-[#F8F8FF] mb-4 leading-18">
+            <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-[42px] 2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 leading-12">
               <span className="text-[#0797A0]">Who</span> We Are & <br />
               <span className="text-[#0797A0]">What</span> We Do
             </h2>
-            <p className="text-base sm:text-lg md:text-xl font-normal text-gray-300">
+            <p className="text-base sm:text-lg  lg:text-lg 2xl:text-xl font-normal text-gray-300">
               A wing of Prime IT Club, driving innovation through knowledge sharing and collaboration.
             </p>
 
           {/* Small Cards Grid */}
-          <div className="md:mt-14 grid left-0 grid-cols-2 sm:grid-cols-3 gap-8 md:gap-4 md:p-0 p-6">
+          <div className="2xl:mt-14 lg:mt-10 grid left-0 grid-cols-2 sm:grid-cols-3 gap-8 md:gap-4 md:p-0 p-6">
             <SmallCard className="" imageUrl={assets.developIcon} title="Develop" />
             <SmallCard className="" imageUrl={assets.innovateIcon} title="Innovate" />
             <SmallCard className="" imageUrl={assets.collaborateIcon} title="Collaborate" />
