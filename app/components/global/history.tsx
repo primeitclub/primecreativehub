@@ -1,6 +1,6 @@
-import React from 'react';
-import SectionHeading from '../reusable/SectionHeading';
-import { Timeline } from './timeline';
+import React from "react";
+import SectionHeading from "../reusable/SectionHeading";
+import { Timeline } from "./timeline";
 
 const timelineEvents = [
   {
@@ -21,13 +21,16 @@ const timelineEvents = [
     description:
       "Creative Hub founded with a vision to bring together artists and designers from around the world.",
   },
-
 ];
 
 export default function History() {
   return (
-    <section id='history' className="py-12 px-4 max-w-6xl mx-auto">
-      <SectionHeading text="Our Club History" spanIndex={2} highlightClassName="text-cyan-500" />
+    <section className="py-12 px-4 max-w-6xl mx-auto">
+      <SectionHeading
+        text="Our Club History"
+        spanIndex={2}
+        highlightClassName="text-cyan-500"
+      />
       <Timeline events={timelineEvents} />
     </section>
   );

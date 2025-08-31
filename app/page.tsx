@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import About from './components/global/about';
-import HeroSection from './components/global/heroSection';
-import History from './components/global/history';
-
+import HeroSection from "./components/global/heroSection";
+import About from "./components/global/about";
+import History from "./components/global/history";
+import Team from "./components/global/teamSection";
 export default function Page() {
   return (
     <>
       <HeroSection />
       <About />
-      <History/>
+      <History />
+      <Team />
     </>
-
   );
 }
