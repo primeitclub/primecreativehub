@@ -21,7 +21,7 @@ export default function Card({ title, subtitle, imageUrl, className,  }: CardPro
           <div className="relative flex w-auto h-auto  overflow-hidden">
 
             <div
-              className='relative w-[80px] h-[40px] md:w-[120px] md:h-[60px] lg:w-[100px] lg:h-[50px] 2xl:w-[160px] 2xl:h-[80px]'
+              className='relative w-[80px] h-[40px] md:w-[120px] md:h-[60px] lg:w-[100px] lg:h-[50px] 2xl:w-[140px] 2xl:h-[70px]'
             >
               <Image
                 src={imageUrl}
@@ -36,8 +36,8 @@ export default function Card({ title, subtitle, imageUrl, className,  }: CardPro
 
          
         <div className='' >
-  <h3 className="lg:text-[18px] 2xl:text-[24px] sm:text-[18px] text-[12px] font-[600] text-center tracking-tight text-white">{title}</h3>
-        {subtitle && <p className="text-center text-white/70 text-[12px] lg:text-[15px] 2xl:text-[19px]">{subtitle}</p>}
+  <h3 className="lg:text-[18px] 2xl:text-[22px] sm:text-[18px] text-[12px] font-[600] text-center tracking-tight text-white">{title}</h3>
+        {subtitle && <p className="text-center text-white/70 text-[10px] lg:text-[15px] 2xl:text-[17px]">{subtitle}</p>}
         </div>
 
         <div className="none" />

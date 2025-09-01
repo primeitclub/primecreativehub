@@ -26,7 +26,7 @@ const timelineEvents = [
 
 export default function History() {
   return (
-    <section className="py-12 px-4 max-w-6xl mx-auto">
+    <section id='history' className="py-12 px-4 max-w-6xl mx-auto">
       <SectionHeading text="Our Club History" spanIndex={2} highlightClassName="text-cyan-500" />
       <Timeline events={timelineEvents} />
     </section>

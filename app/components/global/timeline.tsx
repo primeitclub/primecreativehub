@@ -15,10 +15,10 @@ interface TimelineProps {
 
 export function Timeline({ events, className }: TimelineProps) {
   return (
-    <div className={cn("relative max-w-4xl mx-auto py-8", className)}>
+    <div className={cn("relative max-w-4xl mx-auto py-20", className)}>
       {/* Vertical line: start at first dot, end at last dot */}
       <div
-        className="absolute left-1/2 transform -translate-x-1/2 w-0.5"
+        className="absolute left-1/2 transform -translate-x-1/2 w-1 rounded-2xl"
         style={{
           backgroundColor: "#0797A0",
           top: 'calc(4.5rem + 20px)', // 4.5rem (card padding+margin) + 24px (half card/dot height)
@@ -45,8 +45,7 @@ export function Timeline({ events, className }: TimelineProps) {
               )}
             >
               <div
-                className="font-semibold mb-2"
-                style={{ fontSize: "40px", color: "#0797A0" }}
+                className="font-semibold mb-2 text-[#0797A0] text-[20px] sm:text-[28px] md:text-[32px] lg:text-[40px]"
               >
                 {event.date}
               </div>
@@ -54,26 +53,24 @@ export function Timeline({ events, className }: TimelineProps) {
                 <div className="text-sm text-cyan-400 mb-1">{event.location}</div>
               )}
               <h3
-                className="font-semibold text-foreground mb-2"
-                style={{ fontSize: "20px" }}
+                className="font-semibold text-foreground mb-2 text-[10px] sm:text-[14px] md:text-[16px] lg:text-[20px]"
               >
                 {event.title}
               </h3>
               <p
-                className="text-muted-foreground leading-relaxed"
-                style={{ fontSize: "16px" }}
+                className="text-muted-foreground leading-relaxed text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px]"
               >
                 {event.description}
               </p>
             </div>
 
             {/* Glowing dot */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 z-10 top-[20%]">
+            <div className="absolute left-1/2 transform -translate-x-1/2 z-10 top-[22%]">
               <div className="relative">
                 {/* Outer glow */}
-                <div className="absolute inset-0 w-4 h-4 bg-white rounded-full animate-pulse opacity-75 blur-sm" />
+                <div className="absolute inset-0 w-2 h-2 bg-white rounded-full animate-pulse opacity-75 blur-sm" />
                 {/* Inner dot */}
-                <div className="relative w-4 h-4 bg-white rounded-full border-2 border-background shadow-lg">
+                <div className="relative w-2 h-2 bg-white rounded-full shadow-lg border-3 p-1 border-[#020E0F]">
                   {/* Inner glow */}
                   <div className="absolute inset-0.5 bg-white/50 rounded-full blur-[1px]" />
                 </div>
@@ -83,7 +80,7 @@ export function Timeline({ events, className }: TimelineProps) {
             {/* Connector line to dot */}
             <div
               className={cn(
-                "absolute top-[23%] w-8 h-0.5",
+                "absolute top-[24%] w-8 h-1 rounded-2xl",
                 isLeft ? "right-1/2 mr-2" : "left-1/2 ml-2"
               )}
               style={{ backgroundColor: "#0797A0" }}

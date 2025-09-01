@@ -38,7 +38,7 @@ export default function About() {
  </div>
 
         {/* Info + Small Cards Section */}
-  <div className="flex flex-col gap-2 2xl:gap-4 w-full lg:w-2/3 h-fit 2xl:pr-0 lg:pr-10 md:pr-0">
+  <div className="flex flex-col gap-2 2xl:gap-4 w-full lg:w-2/3 h-fit 2xl:pr-20 lg:pr-10 md:pr-0">
           {/* Heading for mobile */}
             <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-[42px] 2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 leading-12">
               <span className="text-[#0797A0]">Who</span> We Are & <br />
@@ -62,8 +62,8 @@ export default function About() {
       </div>
 
       {/* Background Circle */}
-      {/* <div className="absolute w-56 h-56 left-[-50px] top-[150px] lg:w-72 lg:h-72  m-auto bg-gradient-to-br from-[#0f172a] via-[#0797A0] to-[#0a0f16] rounded-full blur-[125px] -z-10"></div>
-      <div className="absolute w-56 h-56 right-[-50px] top-[150px] lg:w-72 lg:h-72  m-auto bg-gradient-to-br from-[#0f172a] via-[#0797A0] to-[#0a0f16] rounded-full blur-[125px] -z-10"></div> */}
+      <div className="absolute w-56 h-56 left-[-180px] top-[30%] lg:w-96 lg:h-96  m-auto bg-gradient-to-br from-[#0f172a] via-[#0796a044] to-[#0a0f16] rounded-full blur-[950px] -z-10"></div>
+      <div className="absolute w-56 h-56 right-[-220px] top-[20%] lg:w-[400px] lg:h-[460px]  m-auto bg-[#0796a049] rounded-full blur-[1050px] -z-10"></div>
     </div>
   );
 }
