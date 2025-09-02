@@ -45,7 +45,7 @@ export default function TeamSection() {
 
         <div
           className="pt-24 relative z-10 grid gap-5 sm:gap-6 md:gap-8
-                     grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                     grid-cols-2 sm:grid-cols-2 md:grid-cols-3"
         >
           {TEAM.map((m) => (
             <article
@@ -55,7 +55,7 @@ export default function TeamSection() {
                 bg-[#1C2727] p-5 text-center text-white shadow-md ring-1 ring-white/5
                 sm:min-h-[320px] sm:p-6
                 md:min-h-[440px] md:p-7
-                transition-all duration-300 ease-out
+                transition-all duration-300 ease-out border-1 border-[#0797A0]
                 hover:-translate-y-2 hover:scale-105 hover:shadow-lg
               "
             >
@@ -82,7 +82,7 @@ export default function TeamSection() {
                   {m.subRole}
                 </p>
 
-                <div className="mt-4 flex items-center gap-8">
+                <div className="mt-4 flex items-center gap-6 sm:gap-8 ">
                   <a
                     href={m.socials.instagram ?? "#"}
                     target="_blank"
