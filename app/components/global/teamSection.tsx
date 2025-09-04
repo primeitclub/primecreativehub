@@ -44,15 +44,16 @@ export default function TeamSection() {
         />
 
         <div
-          className="pt-24 relative z-10 grid gap-5 sm:gap-6 md:gap-8
+          className="pt-24 relative z-10 grid gap-8 sm:gap-6 md:gap-8
                      grid-cols-2 sm:grid-cols-2 md:grid-cols-3"
         >
           {TEAM.map((m) => (
             <article
               key={m.id}
               className="
-                group flex min-h-[300px] flex-col items-center justify-center gap-8 rounded-[8px]
+                group flex  flex-col items-center justify-center gap-8 rounded-[8px]
                 bg-[#1C2727] p-5 text-center text-white shadow-md ring-1 ring-white/5
+                
                 sm:min-h-[320px] sm:p-6
                 md:min-h-[440px] md:p-7
                 transition-all duration-300 ease-out border-1 border-[#0797A0]
