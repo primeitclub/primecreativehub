@@ -28,7 +28,7 @@ export default function TeamSection() {
       <div
         className="
     relative mx-auto w-full
-    px-[8vw] md:px-[12vw] lg:px-[15vw]
+     2xl:px-[15%] md:px-[12vw] lg:px-[8vw] px-[10%]   
   "
       >
         <div
@@ -47,7 +47,6 @@ export default function TeamSection() {
         <SectionHeading
           text="The Amazing Team"
           spanIndex={3}
-          highlightClassName="text-cyan-500"
         />
 
         <div
@@ -65,7 +64,7 @@ export default function TeamSection() {
                 rounded-[8px] bg-[#1C2727] text-white text-center
                 shadow-md ring-1 ring-white/5 border border-[#0797A0]
                 py-4 sm:p-6 md:p-7 lg:p-8
-                min-h-[156px] sm:min-h-[300px] md:min-h-[236px] lg:min-h-[320px] xl:min-h-[506px] 2xl:min-h-[506px]
+                2xl:min-h-[506px]
                 transition-all duration-300 ease-out
                 hover:-translate-y-2 hover:scale-105 hover:shadow-lg
               "
@@ -73,11 +72,11 @@ export default function TeamSection() {
               <div className="relative mb-2 sm:mb-5 md:mb-7 lg:mb-10 xl:mb-14 2xl:mb-14">
                 <div
                   className="
+                    relative
                     h-24 w-24
                     sm:h-24 sm:w-24
                     md:h-25 md:w-25
-                    lg:h-35 lg:w-35
-                    xl:h-56 xl:w-56
+                    lg:h-40 lg:w-40
                     2xl:h-56 2xl:w-56
                     overflow-hidden rounded-full ring-2 ring-white/20
                     transition-transform duration-300 group-hover:scale-110
@@ -86,8 +85,7 @@ export default function TeamSection() {
                   <Image
                     src={m.image}
                     alt={m.name}
-                    width={320}
-                    height={320}
+                    fill
                     className="h-full w-full object-cover"
                     priority={m.id <= 4}
                   />
