@@ -28,7 +28,7 @@ export default function TeamSection() {
       <div
         className="
     relative mx-auto w-full
-    px-[5vw] md:px-[10vw]
+    px-[8vw] md:px-[12vw]
   "
       >
         <div
