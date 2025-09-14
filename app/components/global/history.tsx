@@ -29,7 +29,6 @@ export default function History() {
       <SectionHeading
         text="Our Club History"
         spanIndex={2}
-        highlightClassName="text-cyan-500"
       />
       <Timeline events={timelineEvents} />
     </section>

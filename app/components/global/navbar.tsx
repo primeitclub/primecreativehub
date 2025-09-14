@@ -36,9 +36,11 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed z-50 flex items-center w-full h-[60px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8">
+    <nav className="fixed z-50 flex items-center w-full h-[70px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8 bg-white/5 backdrop-blur-md border border-white/30 shadow-lg transition-all duration-300">
+   {/* <nav className="fixed z-50 flex items-center w-full h-[70px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8 bg-[rgba(0,0,0,0)] backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300">
+      
       {/* Logo */}
-      <div className="relative w-[40px] h-[40px] md:w-[45px] md:h-[45px]">
+      <div className="relative w-[40px] h-[40px] md:w-[45px] md:h-[45px] -translate-y-4 ml-12 ">
         <Link href="/">
           <Image src="/images/icon.svg" alt="Logo" fill className="object-contain cursor-pointer" />
         </Link>
@@ -46,7 +48,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Button */}
       <button
-        className="ml-auto md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95"
+        className="ml-auto md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95 -translate-y-4"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
@@ -54,7 +56,7 @@ export default function Navbar() {
       </button>
 
       {/* Desktop Nav Items */}
-      <div className="hidden md:flex flex-grow justify-center gap-[40px]">
+      <div className="hidden md:flex flex-grow justify-center gap-[40px] -translate-y-4 mr-12">
         {navItems.map(({ name, href }) => {
           const isActive = active === name.toLowerCase()
           return (

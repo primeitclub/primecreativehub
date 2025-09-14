@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./styles/globals.css";
 import Navbar from "./components/global/navbar";
 import { Mona_Sans } from 'next/font/google';
+import Downfooter from "./components/global/downfooter";
 
 const monaSans = Mona_Sans({
   subsets: ['latin'],
@@ -58,6 +59,8 @@ export default function RootLayout({
       <body className="antialiased">
         <Navbar />
         {children}
+        <Downfooter/>
+       
       </body>
     </html>
   );

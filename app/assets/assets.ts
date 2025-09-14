@@ -6,7 +6,9 @@ import collaborateIcon from '../../public/images/collaborate.svg'
 import workshopIcon from '../../public/images/workshop.svg'
 import knowledgeIcon from '../../public/images/PC.svg'
 import mentorIcon from '../../public/images/mentor.svg'
+import copyright from '../../public/images/copyRight.svg'
 const assets = {
+    copyright,
     CreativeLogo,
     ItclubLogo,
     // Using the available icon for all SmallCard components
