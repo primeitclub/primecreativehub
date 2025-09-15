@@ -19,7 +19,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center ">
               <Image
-                src="/images/icon.svg"
+                src="/images/CreativeHub.svg"
                 alt="Logo"
                 width={300}
                 height={300}
