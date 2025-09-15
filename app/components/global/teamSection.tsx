@@ -28,7 +28,7 @@ export default function TeamSection() {
       <div
         className="
     relative mx-auto w-full
-     2xl:px-[15%] md:px-[12vw] lg:px-[8vw] px-[10%]   
+     2xl:px-[17%] md:px-[12vw] lg:px-[8vw] px-[10%]   
   "
       >
         <div
@@ -40,33 +40,28 @@ export default function TeamSection() {
             md:h-[520px] md:w-[820px] md:blur-[240px]
             lg:h-[620px] lg:w-[1080px] lg:blur-[280px]
             xl:min-w-[500px] sm:min-w[126px]
-            bg-[#146B61]/80 rounded-full
+            bg-[#146B61]/80 rounded-full max-w-
           "
         />
 
-        <SectionHeading
-          text="The Amazing Team"
-          spanIndex={3}
-        />
+        <SectionHeading text="The Amazing Team" spanIndex={3} />
 
         <div
           className="
             pt-12 sm:pt-12 md:pt-18
             grid gap-5 sm:gap-6 md:gap-5 lg:gap-6 xl:gap-10
-            grid-cols-2 md:grid-cols-3
+            grid-cols-2 md:grid-cols-3 max-w-7xl justify-center
           "
         >
           {TEAM.map((m) => (
             <article
               key={m.id}
               className="
-                group flex flex-col items-center justify-center
+                group flex flex-col items-center justify-evenly
                 rounded-[8px] bg-[#1C2727] text-white text-center
                 shadow-md ring-1 ring-white/5 border border-[#0797A0]
                 py-4 sm:p-6 md:p-7 lg:p-8
-                2xl:min-h-[506px]
-                transition-all duration-300 ease-out
-                hover:-translate-y-2 hover:scale-105 hover:shadow-lg
+                 max-w-[400px]
               "
             >
               <div className="relative mb-2 sm:mb-5 md:mb-7 lg:mb-10 xl:mb-14 2xl:mb-14">
@@ -79,7 +74,7 @@ export default function TeamSection() {
                     lg:h-40 lg:w-40
                     2xl:h-56 2xl:w-56
                     overflow-hidden rounded-full ring-2 ring-white/20
-                    transition-transform duration-300 group-hover:scale-110
+                    
                   "
                 >
                   <Image
@@ -97,7 +92,7 @@ export default function TeamSection() {
                   {m.name}
                 </h3>
 
-                <p className="mt-1 text-xs sm:text-lg md:text-xs lg:text-base xl:text-2xl 2xl:text-2xl text-white/90">
+                <p className="mt-1 text-xs sm:text-lg md:text-xs lg:text-base xl:text-2xl 2xl:text-xl text-white/90">
                   {m.role}
                 </p>
 
@@ -105,33 +100,33 @@ export default function TeamSection() {
                   {m.subRole}
                 </p>
 
-                <div className="mt-2 flex items-center gap-2 sm:gap-4 md:gap-4">
+                <div className="mt-2 flex items-center gap-2 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-8">
                   <a
                     href={m.socials.instagram ?? "#"}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#0797A0] transition-transform hover:-translate-y-1"
+                    className="text-[#0797A0] "
                     aria-label={`${m.name} on Instagram`}
                   >
-                    <BiLogoInstagramAlt className="h-6 w-6 sm:h-9 sm:w-9 md:h-6 md:w-6 lg:w-8 lg:h-8" />
+                    <BiLogoInstagramAlt className="h-6 w-6 sm:h-9 sm:w-9 md:h-6 md:w-6 lg:w-10 lg:h-10" />
                   </a>
                   <a
                     href={m.socials.github ?? "#"}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#0797A0] transition-transform hover:-translate-y-1"
+                    className="text-[#0797A0] "
                     aria-label={`${m.name} on GitHub`}
                   >
-                    <FaGithub className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-8 lg:h-8" />
+                    <FaGithub className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-9 lg:h-9" />
                   </a>
                   <a
                     href={m.socials.linkedin ?? "#"}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#0797A0] transition-transform hover:-translate-y-1"
+                    className="text-[#0797A0]"
                     aria-label={`${m.name} on LinkedIn`}
                   >
-                    <FaLinkedin className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-8 lg:h-8" />
+                    <FaLinkedin className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-9 lg:h-9" />
                   </a>
                 </div>
               </div>
