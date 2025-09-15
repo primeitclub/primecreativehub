@@ -39,11 +39,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://creativehub.primeitclub.com/images/icon.svg",
-        width: 200,
-        height: 200,
+        url: "https://creativehub.primeitclub.com/images/CreativeHub.png",
         alt: "Prime Creative Hub Logo",
-        type: "image/svg+xml",
+        type: "image/png",
       }
     ],
   },
