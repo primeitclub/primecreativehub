@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   description: "Prime Creative Hub is a wing of Prime IT Club.",
   keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime,Creative , Creative Hub",
   icons: {
-    icon: '/images/CreativeHub.png',
-    shortcut: '/images/CreativeHub.png',
-    apple: '/images/CreativeHub.png',
+    icon: '/images/CreativeHub.svg',
+    shortcut: '/images/CreativeHub.svg',
+    apple: '/images/CreativeHub.svg',
     other: {
       rel: 'icon',
-      url: '/images/CreativeHub.png',
+      url: '/images/CreativeHub.svg',
     },
   },
   openGraph: {
