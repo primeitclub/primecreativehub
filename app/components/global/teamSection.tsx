@@ -40,7 +40,7 @@ export default function TeamSection() {
             md:h-[520px] md:w-[820px] md:blur-[240px]
             lg:h-[620px] lg:w-[1080px] lg:blur-[280px]
             xl:min-w-[500px] sm:min-w[126px]
-            bg-[#146B61]/80 rounded-full max-w-
+            bg-[#146B61]/80 rounded-full
           "
         />
 
@@ -74,7 +74,6 @@ export default function TeamSection() {
                     lg:h-40 lg:w-40
                     2xl:h-56 2xl:w-56
                     overflow-hidden rounded-full ring-2 ring-white/20
-                    
                   "
                 >
                   <Image
