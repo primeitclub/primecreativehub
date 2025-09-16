@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -27,6 +27,7 @@ const AnimatedMenuIcon = ({ isOpen }: { isOpen: boolean }) => (
 export default function Navbar() {
   const [active, setActive] = useState("home")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+   const [isScrolled, setIsScrolled] = useState(false)
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -35,12 +36,32 @@ export default function Navbar() {
     { name: "Team", href: "#team" },
   ]
 
+    useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <nav className="fixed z-50 flex items-center w-full h-[70px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8 bg-white/5 backdrop-blur-md border border-white/30 shadow-lg transition-all duration-300">
+
+     <nav
+      className={`fixed z-50 flex items-center w-full h-[75px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8 transition-all duration-300 
+        ${
+          isScrolled
+            ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
+            : "bg-transparent border-transparent"
+        }
+      `}
+    >
+
    {/* <nav className="fixed z-50 flex items-center w-full h-[70px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8 bg-[rgba(0,0,0,0)] backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300">
+    
       
       {/* Logo */}
-      <div className="relative w-[40px] h-[40px] md:w-[45px] md:h-[45px] -translate-y-4 ml-12 ">
+      <div className="relative w-[40px] h-[40px] md:w-[45px] md:h-[45px] -translate-y-4 ml-4 ">
         <Link href="/">
           <Image src="/images/icon.svg" alt="Logo" fill className="object-contain cursor-pointer" />
         </Link>
@@ -48,7 +69,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Button */}
       <button
-        className="ml-auto md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95 -translate-y-4"
+        className="ml-auto md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95 -translate-y-4 mr-2"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
