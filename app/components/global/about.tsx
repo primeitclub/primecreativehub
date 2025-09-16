@@ -85,7 +85,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-b from-transparent h-28  via-[#020e0f]/80 via-[55%]  to-[#020e0f] absolute inset-0 z-[-12]  "></div>
+      <div className="bg-gradient-to-b from-transparent h-[15%] lg:h-[15%]  via-[#020e0f]/80 via-[55%]  to-[#020e0f] absolute inset-0 z-[-12]  "></div>
       <div className="absolute blurred-bg inset-0 z-[-13] [clip-path:inset(0_0_88%_0)] ">
         <div className="bg-grads absolute h-full w-[50%] left-0 top-0 z-10 -scale-y-100"></div>
         <div className="bg-grads  absolute h-full w-[50%] right-0 top-0 z-10 -scale-x-100 -scale-y-100"></div>
