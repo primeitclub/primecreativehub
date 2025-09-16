@@ -16,7 +16,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   const words = text.split(" ");
   return (
     <h2
-      className={`text-[32px] md:text-[44px] lg:text-[58px] 2xl:text-[64px] max-w-7xl font-bold mb-4 text-center ${className}`}
+      className={`text-[32px] md:text-[44px] lg:text-[58px] 2xl:text-[48px] max-w-7xl font-bold mb-4 text-center ${className}`}
     >
       {words.map((word, idx) => (
         <span

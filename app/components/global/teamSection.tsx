@@ -3,7 +3,6 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import SectionHeading from "../reusable/SectionHeading";
-
 interface TeamMember {
   id: number;
   name: string;
@@ -48,7 +47,7 @@ export default function TeamSection() {
 
         <div
           className="
-            pt-12 sm:pt-12 md:pt-18
+            pt-12 sm:pt-12 md:pt-40
             grid gap-5 sm:gap-6 md:gap-5 lg:gap-6 xl:gap-10
             grid-cols-2 md:grid-cols-3 max-w-7xl justify-center
           "
@@ -125,7 +124,11 @@ export default function TeamSection() {
                     className="text-[#0797A0]"
                     aria-label={`${m.name} on LinkedIn`}
                   >
-                    <FaLinkedin className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-9 lg:h-9" />
+                    <img
+                      src={"/images/linkedin.svg"}
+                      alt="LinkedIn"
+                      className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-9 lg:h-9"
+                    />
                   </a>
                 </div>
               </div>
