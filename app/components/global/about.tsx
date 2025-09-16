@@ -9,7 +9,7 @@ export default function About() {
     <div id="about" className="w-full relative py-[8vw] overflow-hidden sm:gap-[191px] m-auto px-4 sm:px-10 lg:px-28">
       {/* Heading for large screens */}
       <div className="flex lg:hidden justify-center mb-12">
-        <h3 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center ">
+        <h3 className="text-[20px] md:text-[28px] 2xl:text-[48px] font-extrabold font-mona text-[#F8F8FF] text-center ">
           <span className="text-[#0797A0]">Who</span> We Are & <br></br>
           <span className="text-[#0797A0]">What</span> We Do
         </h3>
@@ -40,11 +40,11 @@ export default function About() {
         {/* Info + Small Cards Section */}
   <div className="flex flex-col gap-2 2xl:gap-4 w-full lg:w-2/3 h-fit 2xl:pr-20 lg:pr-10 md:pr-0">
           {/* Heading for mobile */}
-            <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-[42px] 2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 leading-12">
+            <h2 className="hidden lg:block text-[20px] md:text-[28px] lg:leading-0 leading-0  2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 2xl:leading-12">
               <span className="text-[#0797A0]">Who</span> We Are & <br />
               <span className="text-[#0797A0]">What</span> We Do
             </h2>
-            <p className="text-base sm:text-lg  lg:text-lg 2xl:text-xl font-normal text-gray-300">
+            <p className="text-[12px] sm:text-[12px]  lg:text-[16px] 2xl:text-[20px] font-normal text-gray-300">
               A wing of Prime IT Club, driving innovation through knowledge sharing and collaboration.
             </p>
 

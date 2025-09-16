@@ -10,7 +10,7 @@ interface SectionHeadingProps {
 const SectionHeading: React.FC<SectionHeadingProps> = ({ text, spanIndex = 1, highlightClassName = 'text-[#0797A0]', className = '' }) => {
   const words = text.split(' ');
   return (
-  <h2 className={`text-[32px] md:text-[44px] lg:text-[58px] 2xl:text-[64px] font-bold mb-4 text-center ${className}`}>
+  <h2 className={`text-[20px] md:text-[20px] lg:text-[28px] 2xl:text-[48px] font-bold mb-4 text-center ${className}`}>
       {words.map((word, idx) => (
         <span
           key={idx}

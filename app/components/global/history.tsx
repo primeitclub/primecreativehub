@@ -27,7 +27,7 @@ export default function History() {
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">
       <SectionHeading
-        text="Our Club History"
+        text="How We Got Here"
         spanIndex={2}
       />
       <Timeline events={timelineEvents} />
