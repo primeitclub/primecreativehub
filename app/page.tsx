@@ -7,8 +7,8 @@ import StartField from "./components/StartField";
 
 export default function Home() {
   return (
-    <div className="min-h-screen py-6 sm:py-8 md:py-12">
-      <div className="px-4 sm:px-6 md:px-[7vw]  h-screen flex justify-between items-center ">
+    <div className="min-h-screen py-6 sm:py-8 md:py-12 flex flex-col justify-center items-center">
+      <div className="px-4 sm:px-6 md:px-[7vw]  flex justify-between items-center ">
         <div className="absolute top-0 left-0 w-full h-fit z-0">
           <StartField />
         </div>
