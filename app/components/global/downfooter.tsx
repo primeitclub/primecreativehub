@@ -1,14 +1,18 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import SocialIcons from '../reusable/soical-icons'
+import SocialIcon from '../reusable/soical-icons'
 
 export default function Downfooter() {
   return (
     <div className="text-center flex flex-col relative items-center">
       {/* <div className='w-full h-full absolute bg-[linear-gradient(180deg,#295D60_3.43%,#23C6C6_50.61%,#295D60_99.78%)]  z-10  '></div> */}
-      <div className="text-white">
-        <SocialIcons />
+      {/* <div className="text-white">
+        <SocialIcons /> */}
+        <div className="flex items-center justify-center gap-6 text-white">
+            <SocialIcon href="https://instagram.com" src="/images/insta.svg" alt="Instagram" />
+            <SocialIcon href="https://github.com" src="/images/github.svg" alt="GitHub" />
+            <SocialIcon href="https://linkedin.com" src="/images/linkedin.svg" alt="LinkedIn" />
 
         {/* Wrapper for text + fade overlay */}
         <div className=" flex flex-col w-full items-center overflow-hidden">

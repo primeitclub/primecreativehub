@@ -1,6 +1,6 @@
 
 import React from 'react'
-import SocialIcons from '../reusable/soical-icons'
+import SocialIcon from '../reusable/soical-icons'
 import HeroWord from '../reusable/HeroWord'
 import Image from 'next/image'
 import DropArrow from '../reusable/downarrow'
@@ -29,9 +29,14 @@ export default function HeroSection() {
           WING OF PRIME IT CLUB
         </div>
 
-        <div className="mt-2">
+        {/* <div className="mt-2">
           <SocialIcons />
-        </div>
+        </div> */}
+          <div className="flex items-center justify-center gap-6 text-white">
+            <SocialIcon href="https://instagram.com" src="/images/insta.svg" alt="Instagram" />
+            <SocialIcon href="https://github.com" src="/images/github.svg" alt="GitHub" />
+            <SocialIcon href="https://linkedin.com" src="/images/linkedin.svg" alt="LinkedIn" />
+          </div>
 
       </div>
 
