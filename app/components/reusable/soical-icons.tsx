@@ -1,20 +1,20 @@
 'use client';
+import React from 'react';
 
-import {  FaGithub } from 'react-icons/fa';
-import { TbBrandLinkedinFilled } from "react-icons/tb";
-import { PiInstagramLogoFill } from "react-icons/pi";
-export default function SocialIcons() {
+interface SocialIconProps {
+  href: string;
+  src: string;
+  alt: string;
+}
+
+export default function SocialIcon({ href, src, alt }: SocialIconProps) {
   return (
-    <div className="flex items-center justify-center gap-6 mb-5 text-white">
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-        <PiInstagramLogoFill className="social-icon text-[30px] md:text-[4vw] lg:text-[2.2svw] 2xl:text-[56px]" />
-      </a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-        <FaGithub className="social-icon text-[30px] md:text-[4vw] lg:text-[2.2svw] 2xl:text-[56px]" />
-      </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-        <TbBrandLinkedinFilled className="social-icon text-[30px] md:text-[4vw] lg:text-[2.2svw] 2xl:text-[56px]" />
-      </a>
-    </div>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <img
+        src={src}
+        alt={alt}
+        className="w-[30px] md:w-[4vw] lg:w-[2.2vw] 2xl:w-[40px] object-contain"
+      />
+    </a>
   );
 }
