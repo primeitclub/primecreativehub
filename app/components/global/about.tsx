@@ -111,7 +111,7 @@ export default function About() {
       </div> */}
 
       {/* Background Circle */}
-      <div className="absolute w-56 h-56 left-[-180px] top-[30%] lg:w-96 lg:h-96  m-auto bg-gradient-to-br from-[#0f172a] via-[#0796a044] to-[#0a0f16] rounded-full blur-[950px] -z-10"></div>
+      <div className="absolute w-56 h-56 left-[-180px] top-[30%] lg:w-96 lg:h-96  m-auto bg-[gradient-to-br from-[#0f172a] via-[#0796a044] to-[#0a0f16]] rounded-full blur-[950px] -z-10"></div>
       <div className="absolute w-56 h-56 right-[-220px] top-[20%] lg:w-[400px] lg:h-[460px]  m-auto bg-[#0796a049] rounded-full blur-[1050px] -z-10"></div>
     </div>
   );
