@@ -34,7 +34,7 @@ export default function HeroSection() {
          <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
             <SocialIcon href="https://www.instagram.com/primeitclub/" src="/images/insta.svg" alt="Instagram" />
             <SocialIcon href="https://github.com/primeitclub" src="/images/github.svg" alt="GitHub" />
-            <SocialIcon href="https://linkedin.com/company/primeitclub" src="/images/linkedin.svg" alt="LinkedIn" />
+            <SocialIcon href="https://linkedin.com/company/primeitclub" src="/images/linkden.svg" alt="LinkedIn" />
          </div>
 
 
@@ -62,7 +62,7 @@ export default function HeroSection() {
                         key={loopIdx + "-" + index}
                         className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8"
                       >
-                        <div className="relative overflow-visible flex-shrink-0 w-[12px] h-[12px] sm:w-[13px] sm:h-[15px] md:w-[13px] md:h-[15px] lg:w-[27px] lg:h-[30px]">
+                        <div className="relative overflow-visible flex-shrink-0 w-[13px] h-[15px] sm:w-[13px] sm:h-[15px] md:w-[13px] md:h-[15px] lg:w-[27px] lg:h-[30px]">
                           <Image
                             src="/images/Creative Hub.png"
                             alt="Logo"

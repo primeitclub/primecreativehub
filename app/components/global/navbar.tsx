@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -53,12 +54,12 @@ export default function Navbar() {
             ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
             : "bg-transparent border-transparent"
         }
-        h-[64px] sm:h-[64px] md:h-[72px] lg:h-[104px] px-[5vw] md:px-[10vw]`}
+        h-[64px] sm:h-[64px] md:h-[72px] lg:h-[80px] px-[5vw] md:px-[10vw]`}
     >
       {/* Container */}
-      <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-4">
+      <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-6">
         {/* Logo */}
-        <div className="relative w-[56px] h-[56px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
+        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
           <Link href="/">
             <Image
               src="/images/Creative Hub.png"
