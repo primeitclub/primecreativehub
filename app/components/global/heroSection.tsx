@@ -25,7 +25,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] sm:mt-7 md:mt-3.5 lg:mt-4 ">
+        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] mt-3 sm:mt-7 md:mt-3.5 lg:mt-4 ">
           WING OF PRIME IT CLUB
         </div>
 
@@ -33,9 +33,9 @@ export default function HeroSection() {
           <SocialIcons />
         </div> */}
          <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
-            <SocialIcon href="https://instagram.com" src="/images/insta.svg" alt="Instagram" />
-            <SocialIcon href="https://github.com" src="/images/github.svg" alt="GitHub" />
-            <SocialIcon href="https://linkedin.com" src="/images/linkedin.svg" alt="LinkedIn" />
+            <SocialIcon href="https://www.instagram.com/primeitclub/" src="/images/insta.svg" alt="Instagram" />
+            <SocialIcon href="https://github.com/primeitclub" src="/images/github.svg" alt="GitHub" />
+            <SocialIcon href="https://linkedin.com/company/primeitclub" src="/images/linkedin.svg" alt="LinkedIn" />
          </div>
 
 

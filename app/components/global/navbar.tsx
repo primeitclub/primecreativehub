@@ -58,7 +58,7 @@ export default function Navbar() {
       {/* Container */}
       <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-4">
         {/* Logo */}
-        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
+        <div className="relative w-[56px] h-[56px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
           <Link href="/">
             <Image
               src="/images/Creative Hub.png"
@@ -93,7 +93,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95 mr-6.5"
+          className="md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
