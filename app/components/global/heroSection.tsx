@@ -25,7 +25,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[1.9vw] 2xl:text-[32px] text-[#F8F8FF] ">
+        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] ">
           WING OF PRIME IT CLUB
         </div>
 
@@ -41,7 +41,7 @@ export default function HeroSection() {
        <div className='relative z-20'>
          <div className="overflow-hidden py-4 relative mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 w-full">
            <motion.div
-             className="flex gap-0 md:gap-12 lg:gap-16 text-white whitespace-nowrap items-center"
+             className="flex gap-0 md:gap-0 lg:gap-50 text-white whitespace-nowrap items-center"
              style={{ minWidth: '200%', width: '200%' }}
              animate={{ x: ["0%", "-50%"] }}
              transition={{ repeat: Infinity, duration: 22.9 , ease: "linear" }}
@@ -50,7 +50,7 @@ export default function HeroSection() {
                <React.Fragment key={loopIdx}>
                  {Array.from({ length: 18 }).map((_, index) => (
                    <span key={loopIdx + '-' + index} className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8">
-                     <div className='relative w-6 h-6 overflow-visible flex-shrink-0'>
+                     <div className='relative overflow-visible flex-shrink-0 w-[12px] h-[12px] sm:w-[12px] sm:h-[12px] md:w-[12px] md:h-[12px] lg:w-[22px] lg:h-[22px]'>
                        <Image 
                          src="/images/icon.svg" 
                          alt="Logo" 
@@ -59,7 +59,7 @@ export default function HeroSection() {
                          className="object-contain"
                        />
                      </div>
-                     <span className='font-semibold text-[12px] lg:text-[16px] whitespace-nowrap'>
+                     <span className='font-semibold text-[12px] lg:text-[24px] whitespace-nowrap'>
                        Where Creativity Meets Innovation.
                      </span>
                    </span>
