@@ -1,6 +1,6 @@
 
 import React from 'react'
-import SocialIcons from '../reusable/soical-icons'
+import SocialIcon from '../reusable/soical-icons'
 import HeroWord from '../reusable/HeroWord'
 import Image from 'next/image'
 import DropArrow from '../reusable/downarrow'
@@ -25,13 +25,19 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[1.9vw] 2xl:text-[32px] text-[#F8F8FF] ">
+        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] sm:mt-7 md:mt-3.5 lg:mt-4 ">
           WING OF PRIME IT CLUB
         </div>
 
-        <div className="mt-2">
+        {/* <div className="mt-2">
           <SocialIcons />
-        </div>
+        </div> */}
+         <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
+            <SocialIcon href="https://instagram.com" src="/images/insta.svg" alt="Instagram" />
+            <SocialIcon href="https://github.com" src="/images/github.svg" alt="GitHub" />
+            <SocialIcon href="https://linkedin.com" src="/images/linkedin.svg" alt="LinkedIn" />
+         </div>
+
 
       </div>
 
@@ -41,7 +47,7 @@ export default function HeroSection() {
        <div className='relative z-20'>
          <div className="overflow-hidden py-4 relative mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 w-full">
            <motion.div
-             className="flex gap-0 md:gap-12 lg:gap-16 text-white whitespace-nowrap items-center"
+             className="flex gap-0 md:gap-0 lg:gap-50 text-white whitespace-nowrap items-center"
              style={{ minWidth: '200%', width: '200%' }}
              animate={{ x: ["0%", "-50%"] }}
              transition={{ repeat: Infinity, duration: 22.9 , ease: "linear" }}
@@ -50,16 +56,16 @@ export default function HeroSection() {
                <React.Fragment key={loopIdx}>
                  {Array.from({ length: 18 }).map((_, index) => (
                    <span key={loopIdx + '-' + index} className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8">
-                     <div className='relative w-6 h-6 overflow-visible flex-shrink-0'>
+                     <div className='relative overflow-visible flex-shrink-0 w-[12px] h-[12px] sm:w-[13px] sm:h-[15px] md:w-[13px] md:h-[15px] lg:w-[27px] lg:h-[30px]'>
                        <Image 
-                         src="/images/icon.svg" 
+                         src="/images/Creative Hub.png" 
                          alt="Logo" 
                          fill
                          sizes="24px"
                          className="object-contain"
                        />
                      </div>
-                     <span className='font-semibold text-[12px] lg:text-[16px] whitespace-nowrap'>
+                     <span className='font-semibold text-[12px] lg:text-[24px] whitespace-nowrap'>
                        Where Creativity Meets Innovation.
                      </span>
                    </span>
