@@ -47,20 +47,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed z-50 flex items-center max-w-7xl h-[64px] sm:h-[64px] md:h-[72px] lg:h-[104px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8 transition-all duration-300 
-        ${
-          isScrolled
-            ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
-            : "bg-transparent border-transparent"
-        }
-      `}
+      className={`fixed z-50 w-full pt-8 left-1/2 -translate-x-1/2 transition-all duration-300 
+        ${isScrolled ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg" : "bg-transparent border-transparent"}
+        h-[64px] sm:h-[64px] md:h-[72px] lg:h-[104px] px-[5vw] md:px-[10vw]`}
     >
-      {/* <nav className="fixed z-50 flex items-center w-full h-[70px] pt-8 left-1/2 -translate-x-1/2 md:px-[10vw] px-[5vw] gap-6 md:gap-8 bg-[rgba(0,0,0,0)] backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300">
-    
-      
-      {/* Logo */}
-      <div className="max-w-7xl gap-20 flex justify-center w-full m-auto items-center">
-        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] md:w-[42px] md:h-[42px] lg:w-[64px] lg:h-[72px] -translate-y-4 sm:-ml-0 md:ml-0 ">
+      {/* Container */}
+        <div className="w-full max-w-[390px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] mx-auto flex items-center justify-between gap-8 -translate-y-4">
+
+        {/* Logo */}
+        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] ml-5.5 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
           <Link href="/">
             <Image
               src="/images/Creative Hub.png"
@@ -71,17 +66,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="ml-auto md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95 -translate-y-4 mr-4"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <AnimatedMenuIcon isOpen={isMenuOpen} />
-        </button>
-
         {/* Desktop Nav Items */}
-        <div className="hidden md:flex flex-grow justify-center gap-12 -translate-y-4 ml-9">
+        <div className="hidden md:flex flex-grow justify-center gap-8 lg:gap-12">
           {navItems.map(({ name, href }) => {
             const isActive = active === name.toLowerCase();
             return (
@@ -89,25 +75,33 @@ export default function Navbar() {
                 key={name}
                 href={href}
                 onClick={() => setActive(name.toLowerCase())}
-                className={`relative cursor-pointer px-1 py-1 transition duration-300 text-[20px]
+                className={`relative cursor-pointer px-1 py-1 transition duration-300 text-[18px] md:text-[20px]
                 ${
                   isActive
                     ? "text-[#F8F8FF] font-semibold after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-[2px] after:bg-cyan-400"
                     : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
-                }
-              `}
+                }`}
               >
                 {name}
               </Link>
             );
           })}
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95 mr-6.5"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <AnimatedMenuIcon isOpen={isMenuOpen} />
+        </button>
       </div>
+
+      {/* Mobile Menu Dropdown */}
       <div
         className={`absolute top-20 left-0 right-0 mt-2 md:hidden overflow-hidden transition-all duration-500 ease-out ${
-          isMenuOpen
-            ? "max-h-80 opacity-100 translate-y-0"
-            : "max-h-0 opacity-0 -translate-y-4"
+          isMenuOpen ? "max-h-80 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"
         }`}
       >
         <div className="py-6 bg-black/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
@@ -125,11 +119,7 @@ export default function Navbar() {
                   isActive
                     ? "text-[#F8F8FF] font-semibold border-l-2 border-cyan-400 "
                     : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
-                } ${
-                  isMenuOpen
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-4 opacity-0"
-                }`}
+                } ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
                 style={{
                   transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
                 }}
