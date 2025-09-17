@@ -27,7 +27,7 @@ export default function Downfooter() {
           {/* <div className="absolute bottom-0 left-0 w-full  h-[55%] bg-gradient-to-b from-black/0 to-black/100 z-20"></div> */}
           {/* <div className="absolute bottom-0 left-0 w-full  h-[55%]  bg-[linear-gradient(180deg,transparent_0.%,rgba(0,0,0,0.5)_70.61%,rgba(0,0,0,1)_95.78%)] z-20"></div> */}
         </div>
-        <div className="absolute  -bottom-[10%] blur-[15px] sm:bottom-0 sm:blur-[15px] md:blur-[20px] md:bottom-1 lg:bottom-4 lg:blur-[25px]   xl:bottom-0  xl:blur-[30px]  left-0 w-full h-[45%] bg-[#020E0F] z-[100] "></div>
+        <div className="absolute  -bottom-[6%] blur-[10px] sm:bottom-0 sm:blur-[15px] md:blur-[20px] md:bottom-1 lg:bottom-4 lg:blur-[25px]   xl:bottom-0  xl:blur-[35px]  left-0 w-full h-[45%] bg-[#020E0F] z-[100] "></div>
 
         {/* <div className="absolute bottom-0 left-0 w-full h-[55%] bg-[linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.5)_40%,rgba(0,0,0,1)_100%)] z-[100]"></div> */}
       </div>
@@ -38,7 +38,7 @@ export default function Downfooter() {
             className="absolute top-0 left-0 w-full h-[0.7px] sm:h-[1px] 
               bg-[linear-gradient(91deg,#041213_20.35%,#23C6C6_50%,#041213_80.65%)] "
           ></div>
-          <p className="text-[6px] sm:text-[10px] md:text-[10px] lg:text-[16px]  xl:text-[16px]">
+          <p className="text-[8px]  sm:text-[10px] sm:p-1  md:text-[14px] md:p2  lg:text-[15px] xl:p-3 xl:text-[18px]">
             © 2025 Creative Hub. All rights reserved
           </p>
         </div>
