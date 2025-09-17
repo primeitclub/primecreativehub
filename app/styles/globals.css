@@ -185,7 +185,7 @@ nav {
     from 0.25turn at 54% 85%,
     #00000081,
     157deg,
-    #00b4b43d,
+    #64d0d03d,
     352deg,
     #00b4b4
   );
@@ -197,6 +197,11 @@ nav {
     rgba(2, 14, 15, 1) 1%,
     rgba(21, 21, 20, 0.18) 100%
   );
+}
+
+.blurred-bg {
+  mask: linear-gradient(black, black);
+  backdrop-filter: blur(10px);
 }
 
 /* conic-gradient( from 0.25turn at 54% 85%, #00000081, 87deg, #1b6f9336, 343deg, #11bae1 ) */
