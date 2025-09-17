@@ -56,7 +56,7 @@ export default function HeroSection() {
                <React.Fragment key={loopIdx}>
                  {Array.from({ length: 18 }).map((_, index) => (
                    <span key={loopIdx + '-' + index} className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8">
-                     <div className='relative overflow-visible flex-shrink-0 w-[12px] h-[12px] sm:w-[12px] sm:h-[12px] md:w-[12px] md:h-[12px] lg:w-[22px] lg:h-[22px]'>
+                     <div className='relative overflow-visible flex-shrink-0 w-[12px] h-[12px] sm:w-[13px] sm:h-[15px] md:w-[13px] md:h-[15px] lg:w-[27px] lg:h-[30px]'>
                        <Image 
                          src="/images/Creative Hub.png" 
                          alt="Logo" 
