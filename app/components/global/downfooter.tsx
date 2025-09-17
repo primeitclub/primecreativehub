@@ -11,7 +11,7 @@ export default function Downfooter() {
         <SocialIcons />
 
         {/* Wrapper for text + fade overlay */}
-        <div className=" flex flex-col relative  max-w-[1920px] items-center  ">
+        <div className=" flex flex-col relative items-center  ">
           {/* sm:text-[60px] md:text-[95px] lg:text-[160px] xl:text-[175px] */}
           <h1
             className="whitespace-nowrap  
