@@ -25,18 +25,19 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] ">
+        <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] sm:mt-7 md:mt-3.5 lg:mt-4 ">
           WING OF PRIME IT CLUB
         </div>
 
         {/* <div className="mt-2">
           <SocialIcons />
         </div> */}
-          <div className="flex items-center justify-center gap-6 text-white">
+         <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
             <SocialIcon href="https://instagram.com" src="/images/insta.svg" alt="Instagram" />
             <SocialIcon href="https://github.com" src="/images/github.svg" alt="GitHub" />
             <SocialIcon href="https://linkedin.com" src="/images/linkedin.svg" alt="LinkedIn" />
-          </div>
+         </div>
+
 
       </div>
 
