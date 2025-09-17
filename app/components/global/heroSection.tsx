@@ -58,7 +58,7 @@ export default function HeroSection() {
                    <span key={loopIdx + '-' + index} className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-[260px] leading-8">
                      <div className='relative overflow-visible flex-shrink-0 w-[12px] h-[12px] sm:w-[12px] sm:h-[12px] md:w-[12px] md:h-[12px] lg:w-[22px] lg:h-[22px]'>
                        <Image 
-                         src="/images/icon.svg" 
+                         src="/images/Creative Hub.png" 
                          alt="Logo" 
                          fill
                          sizes="24px"

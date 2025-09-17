@@ -61,9 +61,9 @@ export default function Navbar() {
     
       
       {/* Logo */}
-      <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] md:w-[42px] md:h-[42px] lg:w-[50px] lg:h-[50px] -translate-y-4 sm:-ml-0 md:ml-0 lg:ml-10">
+      <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] md:w-[42px] md:h-[42px] lg:w-[55px] lg:h-[55px] -translate-y-4 sm:-ml-0 md:ml-0 lg:ml-10">
         <Link href="/">
-          <Image src="/images/icon.svg" alt="Logo" fill className="object-contain cursor-pointer" />
+          <Image src="/images/Creative Hub.png" alt="Logo" fill className="object-contain cursor-pointer" />
         </Link>
       </div>
 
