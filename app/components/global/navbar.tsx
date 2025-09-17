@@ -48,14 +48,17 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed z-50 w-full pt-8 left-1/2 -translate-x-1/2 transition-all duration-300 
-        ${isScrolled ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg" : "bg-transparent border-transparent"}
+        ${
+          isScrolled
+            ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
+            : "bg-transparent border-transparent"
+        }
         h-[64px] sm:h-[64px] md:h-[72px] lg:h-[104px] px-[5vw] md:px-[10vw]`}
     >
       {/* Container */}
-        <div className="w-full max-w-[390px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] mx-auto flex items-center justify-between gap-8 -translate-y-4">
-
+      <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-4">
         {/* Logo */}
-        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] ml-5.5 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
+        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
           <Link href="/">
             <Image
               src="/images/Creative Hub.png"
@@ -67,7 +70,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Nav Items */}
-        <div className="hidden md:flex flex-grow justify-center gap-8 lg:gap-12">
+        <div className="hidden md:flex flex-grow md:justify-around lg:justify-center justify-center gap-8 lg:gap-12">
           {navItems.map(({ name, href }) => {
             const isActive = active === name.toLowerCase();
             return (
@@ -101,7 +104,9 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       <div
         className={`absolute top-20 left-0 right-0 mt-2 md:hidden overflow-hidden transition-all duration-500 ease-out ${
-          isMenuOpen ? "max-h-80 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"
+          isMenuOpen
+            ? "max-h-80 opacity-100 translate-y-0"
+            : "max-h-0 opacity-0 -translate-y-4"
         }`}
       >
         <div className="py-6 bg-black/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
@@ -119,7 +124,11 @@ export default function Navbar() {
                   isActive
                     ? "text-[#F8F8FF] font-semibold border-l-2 border-cyan-400 "
                     : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
-                } ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+                } ${
+                  isMenuOpen
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-4 opacity-0"
+                }`}
                 style={{
                   transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
                 }}
