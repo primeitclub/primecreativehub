@@ -27,7 +27,7 @@ export default function Downfooter() {
           {/* <div className="absolute bottom-0 left-0 w-full  h-[55%] bg-gradient-to-b from-black/0 to-black/100 z-20"></div> */}
           {/* <div className="absolute bottom-0 left-0 w-full  h-[55%]  bg-[linear-gradient(180deg,transparent_0.%,rgba(0,0,0,0.5)_70.61%,rgba(0,0,0,1)_95.78%)] z-20"></div> */}
         </div>
-        <div className="absolute -bottom-1 md:bottom-3 md:blur-[19px] sm:blur-[18px] lg:blur-[20px] blur-[10px] sm:-bottom-1 xs:blur-[3px] xs:bottom-1 left-0 w-full h-[45%] bg-[#020E0F]   z-[100] "></div>
+        <div className="absolute -bottom-2  md:bottom-3 md:blur-[20px] sm:blur-[18px]  lg:blur-[20px]  xl:blur-[27px] sm:-bottom-1 blur-[16px] xs:-bottom-1 left-0 w-full h-[45%] bg-[#020E0F] z-[100] "></div>
 
         {/* <div className="absolute bottom-0 left-0 w-full h-[55%] bg-[linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.5)_40%,rgba(0,0,0,1)_100%)] z-[100]"></div> */}
       </div>
