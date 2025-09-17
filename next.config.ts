@@ -8,18 +8,18 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/coming-soon',
-        permanent: true,
-      },
-    ];
-  },
+  // images: {
+  //   unoptimized: false,
+  // },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/coming-soon',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
