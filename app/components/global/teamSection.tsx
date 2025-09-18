@@ -1,8 +1,10 @@
 "use client";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import SectionHeading from "../reusable/SectionHeading";
+
 interface TeamMember {
   id: number;
   name: string;
@@ -22,59 +24,222 @@ const TEAM: TeamMember[] = Array.from({ length: 9 }).map((_, i) => ({
 }));
 
 export default function TeamSection() {
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  const autoEnabledRef = useRef(true);
+  const byCodeRef = useRef(false);
+  const isReducedMotion = useMemo(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
+    []
+  );
+
+  const scrollToIndex = (i: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const cardWidth = el.clientWidth;
+    byCodeRef.current = true;
+    el.scrollTo({ left: i * cardWidth, behavior: "smooth" });
+    window.setTimeout(() => (byCodeRef.current = false), 450);
+  };
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 639px)");
+    let interval: number | undefined;
+
+    const start = () => {
+      if (
+        isReducedMotion ||
+        paused ||
+        !media.matches ||
+        !autoEnabledRef.current
+      )
+        return;
+      stop();
+      interval = window.setInterval(() => {
+        setIndex((prev) => {
+          const next = (prev + 1) % TEAM.length;
+          scrollToIndex(next);
+          return next;
+        });
+      }, 2000);
+    };
+
+    const stop = () => {
+      if (interval) clearInterval(interval);
+      interval = undefined;
+    };
+
+    const onMediaChange = () => {
+      stop();
+      setIndex(0);
+      scrollToIndex(0);
+      start();
+    };
+
+    start();
+    media.addEventListener("change", onMediaChange);
+
+    return () => {
+      stop();
+      media.removeEventListener("change", onMediaChange);
+    };
+  }, [paused, isReducedMotion]);
+
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!byCodeRef.current && autoEnabledRef.current) {
+        autoEnabledRef.current = false;
+        setPaused(true);
+      }
+
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const i = Math.floor(
+          (el.scrollLeft + el.clientWidth * 0.5) / el.clientWidth
+        );
+        setIndex((prev) => (prev === i ? prev : i));
+        ticking = false;
+      });
+    };
+
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <section className="relative py-10 sm:py-12 md:py-16 lg:py-20">
+    <section className="relative py-10 sm:py-12 md:py-16 lg:py-30">
       <div
-        className="
-    relative mx-auto w-full
-     2xl:px-[17%] md:px-[12vw] lg:px-[8vw] px-[10%]   
-  "
+        className="relative mx-auto w-full
+     2xl:px-[17%] md:px-[12vw] lg:px-[8vw] px-[10%]"
       >
         <div
           aria-hidden
-          className="
-            pointer-events-none absolute left-1/2 top-[56%] -z-10 -translate-x-1/2 -translate-y-1/2
-            h-[320px] w-[320px] blur-[160px]
-            sm:h-[420px] sm:w-[620px] sm:blur-[200px]
-            md:h-[520px] md:w-[820px] md:blur-[240px]
-            lg:h-[620px] lg:w-[1080px] lg:blur-[280px]
-            xl:min-w-[500px] sm:min-w[126px]
-            bg-[#146B61]/80 rounded-full
-          "
+          className="pointer-events-none absolute left-1/2 top-[56%] -z-10 -translate-x-1/2 -translate-y-1/2 h-[320px] w-[320px] blur-[160px] sm:h-[420px] sm:w-[620px] sm:blur-[200px] md:h-[520px] md:w-[820px] md:blur-[240px] lg:h-[620px] lg:w-[1080px] lg:blur-[280px] xl:min-w-[500px] sm:min-w[126px] bg-[#146B61]/80 rounded-full"
         />
 
         <SectionHeading text="The Amazing Team" spanIndex={3} />
 
-        <div
-          className="
-            pt-12 sm:pt-12 md:pt-40
-            grid gap-5 sm:gap-6 md:gap-5 lg:gap-6 xl:gap-10
-            grid-cols-2 md:grid-cols-3 max-w-7xl justify-center
-          "
-        >
+        <div className="sm:hidden pt-8">
+          <div
+            ref={trackRef}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Team members"
+            className="relative flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onTouchStart={() => setPaused(true)}
+            onTouchEnd={() => setPaused(false)}
+          >
+            {TEAM.map((m) => (
+              <article
+                key={m.id}
+                className="min-w-full snap-center px-2 "
+                aria-label={`${m.name}`}
+              >
+                <div className="group mx-auto flex h-full max-w-[480px] flex-col items-center justify-evenly rounded-[8px] bg-[#1C2727] text-white text-center shadow-md ring-1 ring-white/5 border border-[#0797A0] py-6">
+                  <div className="relative mb-6">
+                    <div className="relative h-24 w-24 sm:h-24 sm:w-24 md:h-25 md:w-25 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 overflow-hidden rounded-full ring-2 ring-white/20">
+                      <Image
+                        src={m.image}
+                        alt={m.name}
+                        fill
+                        className="h-full w-full object-cover"
+                        priority={m.id <= 4}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-1 flex-col items-center">
+                    <h3 className="text-base">{m.name}</h3>
+                    <p className="mt-1 text-sm text-white/90">{m.role}</p>
+                    <p className="italic mt-0.5 text-xs text-white/70">
+                      {m.subRole}
+                    </p>
+                    <div className="mt-3 flex items-center gap-5">
+                      <a
+                        href={m.socials.instagram ?? "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#0797A0]"
+                        aria-label={`${m.name} on Instagram`}
+                      >
+                        <BiLogoInstagramAlt className="h-7 w-7" />
+                      </a>
+                      <a
+                        href={m.socials.github ?? "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#0797A0]"
+                        aria-label={`${m.name} on GitHub`}
+                      >
+                        <FaGithub className="h-6 w-6" />
+                      </a>
+                      <a
+                        href={m.socials.linkedin ?? "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#0797A0]"
+                        aria-label={`${m.name} on LinkedIn`}
+                      >
+                        <FaLinkedin className="h-6 w-6" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-4 flex justify-center gap-2">
+            {TEAM.map((_, i) => {
+              const active = i === index;
+              return (
+                <button
+                  key={i}
+                  aria-label={`Go to slide ${i + 1}`}
+                  onClick={() => {
+                    setIndex(i);
+                    scrollToIndex(i);
+                  }}
+                  className={[
+                    "relative h-2 w-2 rounded-full transition-colors duration-300 ease-out",
+                    "outline-none focus:ring-2 focus:ring-[#0797A0]/40",
+                    active ? "bg-[#0797A0]" : "bg-white/70 hover:bg-white",
+                  ].join(" ")}
+                >
+                  {/* subtle scale pulse for the active dot */}
+                  <span
+                    aria-hidden
+                    className={[
+                      "pointer-events-none absolute inset-0 rounded-full",
+                      "transition-transform duration-300 ease-out",
+                      active ? "scale-125" : "scale-100",
+                    ].join(" ")}
+                  />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="hidden sm:grid pt-12 sm:pt-12 md:pt-17 lg:pt-24 xl:pt-32 2xl:pt-40 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-7xl gap-6 xl:gap-12 justify-center sm:justify-items-center">
           {TEAM.map((m) => (
             <article
               key={m.id}
-              className="
-                group flex flex-col items-center justify-evenly
-                rounded-[8px] bg-[#1C2727] text-white text-center
-                shadow-md ring-1 ring-white/5 border border-[#0797A0]
-                py-4 sm:p-6 md:p-7 lg:p-8
-                 max-w-[400px]
-              "
+              className="group flex flex-col items-center justify-evenly rounded-[8px] bg-[#1C2727] text-white text-center shadow-md ring-1 ring-white/5 border border-[#0797A0] py-4 sm:p-6 md:p-7 lg:p-8 w-full sm:max-w-[400px]  mx-auto"
             >
               <div className="relative mb-2 sm:mb-5 md:mb-7 lg:mb-10 xl:mb-14 2xl:mb-14">
-                <div
-                  className="
-                    relative
-                    h-24 w-24
-                    sm:h-24 sm:w-24
-                    md:h-25 md:w-25
-                    lg:h-40 lg:w-40
-                    2xl:h-56 2xl:w-56
-                    overflow-hidden rounded-full ring-2 ring-white/20
-                  "
-                >
+                <div className="relative h-24 w-24 sm:h-24 sm:w-24 md:h-25 md:w-25 lg:h-40 lg:w-40 2xl:h-56 2xl:w-56 overflow-hidden rounded-full ring-2 ring-white/20">
                   <Image
                     src={m.image}
                     alt={m.name}
@@ -84,20 +249,16 @@ export default function TeamSection() {
                   />
                 </div>
               </div>
-
               <div className="flex flex-1 flex-col items-center">
                 <h3 className=" text-xs sm:text-xs md:text-base lg:text-xl xl:text-3xl 2xl:text-3xl">
                   {m.name}
                 </h3>
-
                 <p className="mt-1 text-xs sm:text-lg md:text-xs lg:text-base xl:text-2xl 2xl:text-xl text-white/90">
                   {m.role}
                 </p>
-
-                <p className="italic mt-0.5 text-[10px] sm:text-[14px] md:text-[8px] lg:text-xs xl:text-base 2xl:text-base text-white/70">
+                <p className="italic mt-0.5 text-[10px] sm:text[14px] md:text-[8px] lg:text-xs xl:text-base 2xl:text-base text-white/70">
                   {m.subRole}
                 </p>
-
                 <div className="mt-2 flex items-center gap-2 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-8">
                   <a
                     href={m.socials.instagram ?? "#"}
@@ -124,11 +285,7 @@ export default function TeamSection() {
                     className="text-[#0797A0]"
                     aria-label={`${m.name} on LinkedIn`}
                   >
-                    <img
-                      src={"/images/linkedin.svg"}
-                      alt="LinkedIn"
-                      className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-9 lg:h-9"
-                    />
+                    <FaLinkedin className="h-6 w-6 sm:h-8 sm:w-8 md:h-6 md:w-6 lg:w-9 lg:h-9" />
                   </a>
                 </div>
               </div>

@@ -203,6 +203,13 @@ nav {
   mask: linear-gradient(black, black);
   backdrop-filter: blur(10px);
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 /* conic-gradient( from 0.25turn at 54% 85%, #00000081, 87deg, #1b6f9336, 343deg, #11bae1 ) */
 

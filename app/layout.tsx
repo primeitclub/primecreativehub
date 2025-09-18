@@ -1,26 +1,27 @@
 import { Metadata } from "next";
 import "./styles/globals.css";
 import Navbar from "./components/global/navbar";
-import { Mona_Sans } from 'next/font/google';
+import { Mona_Sans } from "next/font/google";
 import Downfooter from "./components/global/downfooter";
 
 const monaSans = Mona_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-display',
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
   title: "Prime Creative Hub",
   description: "Prime Creative Hub is a wing of Prime IT Club.",
-  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime,Creative , Creative Hub",
+  keywords:
+    "Prime Creative Hub, Prime IT Club, Prime College, Prime,Creative , Creative Hub",
   icons: {
-    icon: '/images/CreativeHub.svg',
-    shortcut: '/images/CreativeHub.svg',
-    apple: '/images/CreativeHub.svg',
+    icon: "/images/CreativeHub.svg",
+    shortcut: "/images/CreativeHub.svg",
+    apple: "/images/CreativeHub.svg",
     other: {
-      rel: 'icon',
-      url: '/images/CreativeHub.svg',
+      rel: "icon",
+      url: "/images/CreativeHub.svg",
     },
   },
   openGraph: {
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
         url: "https://creativehub.primeitclub.com/images/CreativeHub.png",
         alt: "Prime Creative Hub Logo",
         type: "image/png",
-      }
+      },
     ],
   },
   twitter: {
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={monaSans.variable}>
@@ -58,7 +59,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Downfooter />
-
       </body>
     </html>
   );
