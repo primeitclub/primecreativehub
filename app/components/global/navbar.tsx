@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed z-50 w-full pt-8 left-1/2 -translate-x-1/2 transition-all duration-300 
+      className={`fixed z-50 w-full top-1 pt-8 left-1/2 -translate-x-1/2 transition-all duration-300 
         ${isScrolled
           ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
           : "bg-transparent border-transparent"
@@ -55,7 +55,7 @@ export default function Navbar() {
       {/* Container */}
       <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-6.5">
         {/* Logo */}
-        <div className="relative w-[52px] h-[52px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[55px] md:h-[55px] lg:w-[67px] lg:h-[80px]">
+        <div className="relative w-[52px] h-[52px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[55px] md:h-[55px] lg:w-[67px] lg:h-[83px] lg:-translate-y-1">
           <Link href="/">
             <Image
               src="/images/CreativeHub.png"
