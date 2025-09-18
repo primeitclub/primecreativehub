@@ -65,7 +65,7 @@ export default function HeroSection() {
                       >
                         <div className="relative overflow-visible flex-shrink-0 w-[13px] h-[15px] sm:w-[13px] sm:h-[15px] md:w-[13px] md:h-[15px] lg:w-[27px] lg:h-[30px]">
                           <Image
-                            src="/images/Creative Hub.png"
+                            src="/images/CreativeHub.png"
                             alt="Logo"
                             fill
                             sizes="24px"

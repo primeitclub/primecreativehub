@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AnimatedMenuIcon = ({ isOpen }: { isOpen: boolean }) => (
-  <div className="relative w-6 h-6 cursor-pointer">
+  <div className="relative w-5 h-5 cursor-pointer">
     <span
       className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${isOpen ? "top-3 rotate-45" : "top-1"
         }`}
@@ -53,9 +53,9 @@ export default function Navbar() {
         h-[64px] sm:h-[64px] md:h-[72px] lg:h-[80px] px-[5vw] md:px-[10vw]`}
     >
       {/* Container */}
-      <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-6">
+      <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-6.5">
         {/* Logo */}
-        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
+        <div className="relative w-[52px] h-[52px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[55px] md:h-[55px] lg:w-[67px] lg:h-[80px]">
           <Link href="/">
             <Image
               src="/images/CreativeHub.png"
