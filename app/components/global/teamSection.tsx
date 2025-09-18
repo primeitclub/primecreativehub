@@ -48,9 +48,9 @@ export default function TeamSection() {
         <div
           className="
             pt-12 sm:pt-12 md:pt-40
-            grid gap-5 sm:gap-5 md:gap-5 lg:gap-6 xl:gap-10
-            grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-7xl justify-center
-            "
+            grid gap-5 sm:gap-6 md:gap-5 lg:gap-6 xl:gap-10
+            grid-cols-2 md:grid-cols-3 max-w-7xl justify-center
+          "
         >
           {TEAM.map((m) => (
             <article
@@ -60,7 +60,6 @@ export default function TeamSection() {
                 rounded-[8px] bg-[#1C2727] text-white text-center
                 shadow-md ring-1 ring-white/5 border border-[#0797A0]
                 py-4 sm:p-6 md:p-7 lg:p-8
-                max-h-[300px]
                  max-w-[400px]
               "
             >
