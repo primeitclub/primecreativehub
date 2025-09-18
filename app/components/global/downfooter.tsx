@@ -5,14 +5,15 @@ import Image from "next/image";
 import SocialIcon from "../reusable/soical-icons";
 export default function Downfooter() {
   return (
-    <div className="text-center gap-0 flex max-w-[1920px] flex-col relative items-center">
+    <div className="text-center gap-0 flex max-w-[1920px] mt-7 flex-col relative items-center">
       {/* <div className='w-full h-full absolute bg-[linear-gradient(180deg,#295D60_3.43%,#23C6C6_50.61%,#295D60_99.78%)]  z-10  '></div> */}
       <div className="text-white w-full mt-3">
-        <div className="flex flex-row justify-center  gap-10 p-2">
-          <SocialIcon
+        <div className="flex flex-row justify-center gap-4 sm:gap-5 md:gap-7 lg:gap-8  xl:gap-10 p-2">
+          <SocialIcon 
             href="https://instagram.com/primeitclub"
             src="/images/insta.svg"
-            alt="Instagram"
+            alt="Instagram" 
+
           />
           <SocialIcon
             href="https://github.com/"
