@@ -45,7 +45,7 @@ export function Timeline({ events, className }: TimelineProps) {
               )}
             >
               <div
-                className="font-semibold mb-2 text-[#0797A0] text-[20px] sm:text-[28px] md:text-[32px] lg:text-[40px]"
+                className="font-semibold mb-2 text-[#0797A0] text-[20px] sm:text-[20px] md:text-[20px] lg:text-[40px]"
               >
                 {event.date}
               </div>
