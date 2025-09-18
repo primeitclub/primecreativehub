@@ -8,46 +8,37 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <>
-      <div
-        id="home"
-        className="home_container relative h-[100vh] flex flex-col overflow-hidden "
+      <div id="home" className="home_container relative h-[100vh] flex flex-col overflow-hidden "
       >
-        <div className="bg-grads absolute h-full w-[50%] left-0 top-0 z-10"></div>
-        <div className="bg-grads absolute h-full w-[50%] right-0 top-0 z-10 -scale-x-100"></div>
 
-        <div className="bg_top_graident z-10 absolute top-0 left-0 w-full h-full"></div>
+        <div className='bg-grads absolute h-full w-[50%] left-0 top-0 z-10' ></div>
+        <div className='bg-grads absolute h-full w-[50%] right-0 top-0 z-10 -scale-x-100' ></div>
+
+        <div className='bg_top_graident z-10 absolute top-0 left-0 w-full h-full' ></div>
 
         <div className="relative z-20 flex flex-col items-center justify-center text-center flex-grow gap-2 2xl:gap-4">
+
           <div className="flex flex-col sm:flex-row items-center justify-center md:gap-4">
-            {["Innovate", "Build", "Share", "Repeat"].map((word) => (
+            {['Innovate', 'Build', 'Share', 'Repeat'].map(word => (
               <HeroWord key={word} word={word} />
             ))}
           </div>
 
-          <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] mt-3 sm:mt-7 md:mt-3.5 lg:mt-4 ">
+          <div className="font-semibold text-[16px] md:text-[18px] lg:text-[32px] 2xl:text-[32px] text-[#F8F8FF] sm:mt-7 md:mt-3.5 lg:mt-4 ">
             WING OF PRIME IT CLUB
           </div>
 
           {/* <div className="mt-2">
+          {/* <div className="mt-2">
           <SocialIcons />
         </div> */}
-          <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
-            <SocialIcon
-              href="https://www.instagram.com/primeitclub/"
-              src="/images/insta.svg"
-              alt="Instagram"
-            />
-            <SocialIcon
-              href="https://github.com/primeitclub"
-              src="/images/github.svg"
-              alt="GitHub"
-            />
-            <SocialIcon
-              href="https://linkedin.com/company/primeitclub"
-              src="/images/linkden.svg"
-              alt="LinkedIn"
-            />
-          </div>
+         <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
+            <SocialIcon href="https://www.instagram.com/prime_creative_hub" src="/images/insta.svg" alt="Instagram" />
+            <SocialIcon href="https://github.com/primeitclub" src="/images/github.svg" alt="GitHub" />
+            <SocialIcon href="https://www.linkedin.com/in/prime-creative-hub/" src="/images/linkden.svg" alt="LinkedIn" />
+         </div>
+
+
         </div>
 
         {/* Slider */}
@@ -74,7 +65,7 @@ export default function HeroSection() {
                       >
                         <div className="relative overflow-visible flex-shrink-0 w-[13px] h-[15px] sm:w-[13px] sm:h-[15px] md:w-[13px] md:h-[15px] lg:w-[27px] lg:h-[30px]">
                           <Image
-                            src="/images/Creative Hub.png"
+                            src="/images/CreativeHub.png"
                             alt="Logo"
                             fill
                             sizes="24px"

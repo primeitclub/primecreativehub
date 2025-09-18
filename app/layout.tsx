@@ -13,14 +13,14 @@ const monaSans = Mona_Sans({
 export const metadata: Metadata = {
   title: "Prime Creative Hub",
   description: "Prime Creative Hub is a wing of Prime IT Club.",
-  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime, Creative, Creative Hub",
+  keywords: "Prime Creative Hub, Prime IT Club, Prime College, Prime,Creative , Creative Hub",
   icons: {
-    icon: '/creativehubfavicon.ico',
-    shortcut: '/creativehubfavicon.ico',
-    apple: '/creativehubfavicon.ico',
+    icon: '/images/CreativeHub.svg',
+    shortcut: '/images/CreativeHub.svg',
+    apple: '/images/CreativeHub.svg',
     other: {
       rel: 'icon',
-      url: '/creativehubfavicon.ico',
+      url: '/images/CreativeHub.svg',
     },
   },
   openGraph: {
@@ -30,11 +30,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://creativehub.primeitclub.com/images/icon.svg",
-        width: 200,
-        height: 200,
+        url: "https://creativehub.primeitclub.com/images/CreativeHub.png",
         alt: "Prime Creative Hub Logo",
-        type: "image/svg+xml",
+        type: "image/png",
       }
     ],
   },
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prime Creative Hub",
     description: "Prime Creative Hub is a wing of Prime IT Club.",
-    images: ["https://creativehub.primeitclub.com/images/icon.svg"],
+    images: ["https://creativehub.primeitclub.com/images/CreativeHub.png"],
   },
 };
 
@@ -59,8 +57,8 @@ export default function RootLayout({
       <body className="antialiased">
         <Navbar />
         {children}
-        <Downfooter/>
-       
+        <Downfooter />
+
       </body>
     </html>
   );

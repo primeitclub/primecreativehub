@@ -1,4 +1,4 @@
-import CreativeLogo  from './Creative Hub.png'
+import CreativeLogo from '../../public/images/CreativeHub.png'
 import ItclubLogo from './PrimeLogo.png'
 import developIcon from '../../public/images/develop.svg'
 import innovateIcon from '../../public/images/innovate.svg'

@@ -45,7 +45,7 @@ export function Timeline({ events, className }: TimelineProps) {
               )}
             >
               <div
-                className="font-semibold mb-2 text-[#0797A0] text-[20px] sm:text-[20px] md:text-[20px] lg:text-[40px]"
+                className="font-semibold mb-2 text-[#0797A0] text-[20px] lg:text-[40px]"
               >
                 {event.date}
               </div>
@@ -53,12 +53,12 @@ export function Timeline({ events, className }: TimelineProps) {
                 <div className="text-sm text-cyan-400 mb-1">{event.location}</div>
               )}
               <h3
-                className="font-semibold text-foreground mb-2 text-[10px] sm:text-[14px] md:text-[16px] lg:text-[20px]"
+                className="font-semibold text-foreground mb-2 text-[12px] sm:text-[14px] lg:text-[24px] whitespace-nowrap"
               >
                 {event.title}
               </h3>
               <p
-                className="text-muted-foreground leading-relaxed text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px]"
+                className="text-muted-foreground leading-relaxed text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16px] mt-0.5 sm:0.5 md:mt-2 lg:mt-[8.5px]"
               >
                 {event.description}
               </p>
