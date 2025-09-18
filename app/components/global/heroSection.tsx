@@ -33,9 +33,9 @@ export default function HeroSection() {
           <SocialIcons />
         </div> */}
          <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
-            <SocialIcon href="https://www.instagram.com/primeitclub/" src="/images/insta.svg" alt="Instagram" />
+            <SocialIcon href="https://www.instagram.com/prime_creative_hub" src="/images/insta.svg" alt="Instagram" />
             <SocialIcon href="https://github.com/primeitclub" src="/images/github.svg" alt="GitHub" />
-            <SocialIcon href="https://linkedin.com/company/primeitclub" src="/images/linkden.svg" alt="LinkedIn" />
+            <SocialIcon href="https://www.linkedin.com/in/prime-creative-hub/" src="/images/linkden.svg" alt="LinkedIn" />
          </div>
 
 
