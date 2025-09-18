@@ -2,18 +2,29 @@
 import React from "react";
 import Image from "next/image";
 // import SocialIcons from "../reusable/soical-icons";
-import SocialIcon from '../reusable/soical-icons'
+import SocialIcon from "../reusable/soical-icons";
 export default function Downfooter() {
   return (
     <div className="text-center gap-0 flex max-w-[1920px] flex-col relative items-center">
       {/* <div className='w-full h-full absolute bg-[linear-gradient(180deg,#295D60_3.43%,#23C6C6_50.61%,#295D60_99.78%)]  z-10  '></div> */}
       <div className="text-white w-full mt-3">
-      <div className="flex flex-row justify-center  gap-10 p-2">
-      <SocialIcon href="https://instagram.com/primeitclub" src="/images/insta.svg" alt="Instagram" />
-      <SocialIcon href="https://github.com/" src="/images/github.svg" alt="GitHub" />
-      <SocialIcon href="https://linkedin.com/company/itclub" src="/images/linkedin.svg" alt="LinkedIn" />
-      </div>
-
+        <div className="flex flex-row justify-center  gap-10 p-2">
+          <SocialIcon
+            href="https://instagram.com/primeitclub"
+            src="/images/insta.svg"
+            alt="Instagram"
+          />
+          <SocialIcon
+            href="https://github.com/"
+            src="/images/github.svg"
+            alt="GitHub"
+          />
+          <SocialIcon
+            href="https://linkedin.com/company/itclub"
+            src="/images/linkden.svg"
+            alt="LinkedIn"
+          />
+        </div>
 
         {/* Wrapper for text + fade overlay */}
         <div className=" flex flex-col relative items-center  ">
@@ -42,7 +53,9 @@ export default function Downfooter() {
           <div
             className="absolute top-0 left-0 w-full h-[0.7px] sm:h-[1px] 
               bg-[linear-gradient(91deg,#041213_20.35%,#23C6C6_50%,#041213_80.65%)] "
-          > </div>
+          >
+            {" "}
+          </div>
           <p className="text-[8px] p-0 mt-1 sm:text-[10px] sm:p-0 md:text-[14px] md:p2 lg:text-[15px] xl:p-3 xl:text-[20px]">
             © 2025 Creative Hub. All rights reserved
           </p>
