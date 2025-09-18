@@ -1,22 +1,13 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Jersey_25 } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/Navbar";
+import { Metadata } from "next";
+import "./styles/globals.css";
+import Navbar from "./components/global/navbar";
+import { Mona_Sans } from 'next/font/google';
+import Downfooter from "./components/global/downfooter";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const jersey = Jersey_25({
+const monaSans = Mona_Sans({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-jersey'
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-display',
 });
 
 export const metadata: Metadata = {
@@ -55,28 +46,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className={monaSans.variable}>
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,200,100,400;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body
-        className={`${geistSans.variable} ${jersey.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <Navbar />
-        <main>
-          {children}
-        </main>
+        {children}
+        <Downfooter />
+
       </body>
     </html>
   );
