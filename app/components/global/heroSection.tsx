@@ -29,7 +29,7 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-2">
-            <SocialIcons />
+            <SocialIcons  />
           </div>
         </div>
 
