@@ -8,19 +8,16 @@ import Link from "next/link";
 const AnimatedMenuIcon = ({ isOpen }: { isOpen: boolean }) => (
   <div className="relative w-6 h-6 cursor-pointer">
     <span
-      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
-        isOpen ? "top-3 rotate-45" : "top-1"
-      }`}
+      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${isOpen ? "top-3 rotate-45" : "top-1"
+        }`}
     />
     <span
-      className={`absolute left-0 top-3 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
-        isOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
-      }`}
+      className={`absolute left-0 top-3 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${isOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+        }`}
     />
     <span
-      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
-        isOpen ? "top-3 -rotate-45" : "top-5"
-      }`}
+      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${isOpen ? "top-3 -rotate-45" : "top-5"
+        }`}
     />
   </div>
 );
@@ -49,10 +46,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed z-50 w-full pt-8 left-1/2 -translate-x-1/2 transition-all duration-300 
-        ${
-          isScrolled
-            ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
-            : "bg-transparent border-transparent"
+        ${isScrolled
+          ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
+          : "bg-transparent border-transparent"
         }
         h-[64px] sm:h-[64px] md:h-[72px] lg:h-[80px] px-[5vw] md:px-[10vw]`}
     >
@@ -62,7 +58,7 @@ export default function Navbar() {
         <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
           <Link href="/">
             <Image
-              src="/images/Creative Hub.png"
+              src="/images/CreativeHub.png"
               alt="Logo"
               fill
               className="object-contain cursor-pointer"
@@ -80,11 +76,10 @@ export default function Navbar() {
                 href={href}
                 onClick={() => setActive(name.toLowerCase())}
                 className={`relative cursor-pointer px-1 py-1 transition duration-300 text-[18px] md:text-[20px]
-                ${
-                  isActive
+                ${isActive
                     ? "text-[#F8F8FF] font-semibold after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-[2px] after:bg-cyan-400"
                     : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
-                }`}
+                  }`}
               >
                 {name}
               </Link>
@@ -104,11 +99,10 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-20 left-0 right-0 mt-2 md:hidden overflow-hidden transition-all duration-500 ease-out ${
-          isMenuOpen
-            ? "max-h-80 opacity-100 translate-y-0"
-            : "max-h-0 opacity-0 -translate-y-4"
-        }`}
+        className={`absolute top-20 left-0 right-0 mt-2 md:hidden overflow-hidden transition-all duration-500 ease-out ${isMenuOpen
+          ? "max-h-80 opacity-100 translate-y-0"
+          : "max-h-0 opacity-0 -translate-y-4"
+          }`}
       >
         <div className="py-6 bg-black/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
           {navItems.map(({ name, href }, index) => {
@@ -121,15 +115,13 @@ export default function Navbar() {
                   setActive(name.toLowerCase());
                   setIsMenuOpen(false);
                 }}
-                className={`block px-8 py-3 transition-all duration-300 text-lg font-medium transform hover:translate-x-2 hover:bg-white/5 ${
-                  isActive
-                    ? "text-[#F8F8FF] font-semibold border-l-2 border-cyan-400 "
-                    : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
-                } ${
-                  isMenuOpen
+                className={`block px-8 py-3 transition-all duration-300 text-lg font-medium transform hover:translate-x-2 hover:bg-white/5 ${isActive
+                  ? "text-[#F8F8FF] font-semibold border-l-2 border-cyan-400 "
+                  : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
+                  } ${isMenuOpen
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0"
-                }`}
+                  }`}
                 style={{
                   transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
                 }}
