@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import SectionHeading from "../reusable/SectionHeading";
+import Link from "next/link";
 interface TeamMember {
   id: number;
   name: string;
@@ -23,7 +24,7 @@ const TEAM: TeamMember[] = Array.from({ length: 9 }).map((_, i) => ({
 
 export default function TeamSection() {
   return (
-    <section className="relative py-10 sm:py-12 md:py-16 lg:py-20">
+    <section id="team"  className="relative py-10 sm:py-12 md:py-16 lg:py-20">
       <div
         className="
     relative mx-auto w-full
