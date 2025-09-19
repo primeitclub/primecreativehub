@@ -9,17 +9,17 @@ export default function About() {
       id="about"
       className=" relative py-[8vw] overflow-hidden sm:gap-[191px] m-auto px-4 sm:px-10 lg:px-28"
     >
-      <div className="max-w-[1280px] mx-auto">
+      <div className="lg:max-w-[1240px] md:max-w-[766px] mx-auto 2xl:px-0 lg:px-10">
         {/* Heading for large screens */}
-        <div className="flex lg:hidden justify-center mb-12">
-          <h3 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center ">
+        <div className="flex lg:hidden justify-center mb-6">
+          <h3 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center">
             <span className="text-[#0797A0]">Who</span> We Are & <br></br>
             <span className="text-[#0797A0]">What</span> We Do
           </h3>
         </div>
 
         {/* Responsive main flex layout */}
-        <div className="flex flex-col lg:flex-row items-stretch gap-24 md:gap-18 2xl:gap-48  xl:px-[0]  py-10 lg:py-0  min-h-[500px]">
+        <div className="flex flex-col lg:flex-row items-stretch gap-24 md:gap-18 2xl:gap-48  xl:px-[0]  py-10 lg:py-0  min-h-[500px] justify-between">
           {/* Cards Section */}
           <div className="  ">
             <div className="relative flex justify-between lg:justify-between items-center lg:flex-col w-full m-auto  h-full">
@@ -40,7 +40,7 @@ export default function About() {
           </div>
 
           {/* Info + Small Cards Section */}
-          <div className="flex flex-col gap-2 2xl:gap-8 w-full lg:w-2/3 h-fit 2xl:pr-8 lg:pr-10 md:pr-0">
+          <div className="flex flex-col gap-2 2xl:gap-8 w-full lg:w-2/3 h-fit 2xl:pr-0 xl:pr-14 lg:pr-0">
             {/* Heading for mobile */}
             {/* <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-[42px] 2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 leading-12">
               <span className="text-[#0797A0]">Who</span> We Are & <br />
@@ -49,7 +49,7 @@ export default function About() {
             <SectionHeading
               text={`Who We Are &\nWhat We Do`}
               spanIndex={[1, 5]}
-              className="hidden lg:block mb-4 leading-12 text-left"
+              className="hidden lg:block leading-[1.1] text-left "
             />
 
             <p className="text-base sm:text-lg  lg:text-lg 2xl:text-xl font-normal text-gray-300">
@@ -58,7 +58,7 @@ export default function About() {
             </p>
 
             {/* Small Cards Grid */}
-            <div className="2xl:mt-14 lg:mt-10 grid left-0 grid-cols-2 sm:grid-cols-3 gap-8 md:gap-4 md:p-0 p-6">
+            <div className="2xl:mt-14 lg:mt-10 grid left-0 grid-cols-2 sm:grid-cols-3 gap-4 md:gap-5 md:p-0 p-6">
               <SmallCard
                 className=""
                 imageUrl={assets.developIcon}
