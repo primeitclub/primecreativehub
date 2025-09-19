@@ -6,7 +6,7 @@ interface HeroWordProps {
 }
 
 const HeroWord: React.FC<HeroWordProps> = ({ word }) => (
-  <h1 className="flex items-center justify-center font-extrabold text-[40px] md:text-[44px] lg:text-[64px] xl:text-[72px] 2xl:text-[82px]">
+  <h1 className="flex items-center justify-center font-extrabold text-[40px] md:text-[44px] lg:text-[54px] xl:text-[64px] 2xl:text-[72px]">
     <span className="flex items-baseline">
       {/* <ShinyText 
       text={word}
