@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../reusable/SectionHeading";
 import { Timeline } from "./timeline";
+import Link from "next/link";
 
 const timelineEvents = [
   {
@@ -25,7 +26,8 @@ const timelineEvents = [
 
 export default function History() {
   return (
-    <section className="py-12 px-4 max-w-6xl mx-auto">
+    
+    <section id="history" className="py-12 px-4 max-w-6xl mx-auto">
       <SectionHeading
         text="How We Got Here"
         spanIndex={1}

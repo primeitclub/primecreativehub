@@ -28,10 +28,6 @@ export default function HeroSection() {
             WING OF PRIME IT CLUB
           </div>
 
-          {/* <div className="mt-2">
-          {/* <div className="mt-2">
-          <SocialIcons />
-        </div> */}
          <div className="flex items-center justify-center gap-4 sm:gap-2 md:gap-4.75 lg:gap-9.5 sm:mt-2 md:mt-3.5 lg:mt-7">
             <SocialIcon href="https://www.instagram.com/prime_creative_hub" src="/images/insta.svg" alt="Instagram" />
             <SocialIcon href="https://github.com/primeitclub" src="/images/github.svg" alt="GitHub" />
