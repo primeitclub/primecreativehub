@@ -47,8 +47,8 @@ export default function Navbar() {
       className={`fixed z-50 w-full top-0 transition-all duration-300 ${
         isScrolled
           ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
-          : "bg-transparent border-transparent"
-      } h-[80px] px-[5vw] md:px-[10vw]`}
+          : "bg-transparent border-transparent py-2"
+      } h-fit px-[5vw] md:px-[14vw]`}
     >
       <div className="max-w-[1280px] mx-auto h-full flex items-center relative">
         {/* Mobile view */}
@@ -111,7 +111,7 @@ export default function Navbar() {
         {/* Desktop view */}
         <div className="hidden lg:flex w-full items-center justify-between">
           {/* Logo */}
-          <div className="relative w-[67px] h-[83px]">
+          <div className="relative 2xl:w-[67px] 2xl:h-[83px] w-[50px] h-[60px]">
             <Link href="/">
               <Image
                 src="/images/CreativeHub.png"
@@ -131,7 +131,7 @@ export default function Navbar() {
                   key={name}
                   href={href}
                   onClick={() => setActive(name.toLowerCase())}
-                  className={`relative cursor-pointer px-1 py-1 transition duration-300 text-[20px] ${
+                  className={`relative cursor-pointer px-1 py-1 transition duration-300 text-[16px] 2xl:text-[20px] ${
                     isActive
                       ? "text-[#F8F8FF] font-semibold after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-[2px] after:bg-cyan-400"
                       : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"

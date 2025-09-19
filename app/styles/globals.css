@@ -181,14 +181,9 @@ nav {
 }
 
 .bg-grads {
-  background: conic-gradient(
-    from 0.25turn at 54% 85%,
-    #00000081,
-    157deg,
-    #64d0d03d,
-    352deg,
-    #00b4b4
-  );
+  background: conic-gradient( from 0.25turn at 54% 85%, #00000082, 157deg, #00ffff3d, 352deg, #00f3ff )
+  /* background:conic-gradient(from 0.25turn at 54% 85%, #00000081, 157deg, #019b9b85, 340deg, #009393, 352deg, #00f3ff) */
+
 }
 
 .bg_top_graident {
@@ -197,6 +192,14 @@ nav {
     rgba(2, 14, 15, 1) 1%,
     rgba(21, 21, 20, 0.18) 100%
   );
+}
+
+@media screen and (max-width:768px) {
+  .bg-grads {
+  background: conic-gradient( from 0.25turn at 34% 78%, #00000082, 205deg, #00ffff3d, 323deg, #00f3ff );
+  /* background:conic-gradient(from 0.25turn at 54% 85%, #00000081, 157deg, #019b9b85, 340deg, #009393, 352deg, #00f3ff) */
+
+}
 }
 
 .blurred-bg {

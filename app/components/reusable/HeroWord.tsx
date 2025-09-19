@@ -6,14 +6,14 @@ interface HeroWordProps {
 }
 
 const HeroWord: React.FC<HeroWordProps> = ({ word }) => (
-  <h1 className="flex items-center justify-center font-extrabold text-[40px] md:text-[44px] lg:text-[64px] xl:text-[72px] 2xl:text-[82px]">
+  <h1 className="flex items-center justify-center font-extrabold text-[40px] md:text-[44px] lg:text-[45px] xl:text-[52px] 2xl:text-[72px]">
     <span className="flex items-baseline">
       {/* <ShinyText 
       text={word}
       disabled={false}
       /> */}
       <span className="text-[#F8F8FF]">{word}</span>
-      <span className="inline-block text-[16px] md:text-[20px] xl:text-[24px] text-[#0797A0] ml-1">■</span>
+      <span className="inline-block text-[12px] md:text-[14px] 2xl:text-[20px] text-[#0797A0] ml-1">■</span>
     </span>
   </h1>
 );

@@ -13,7 +13,7 @@ type Smallprops = {
 
 export default function SmallCard({ title, imageUrl, children, className }: Smallprops) {
     return (
-        <div className={` ${className} relative border px-[12px] gap-6 rounded-[16px] bg-[#1C2727] border-[#0797A0] overflow-hidden flex flex-col items-center opacity-90 justify-center pt-4 sm:pb-2 pb-6 lg:h-[145px] 2xl:h-[170px]`}>
+        <div className={` ${className} relative border px-[12px] gap-6 rounded-[16px] bg-[#1C2727] border-[#0797A0] overflow-hidden flex flex-col items-center opacity-90 justify-center sm:pb-2 pb-6 md:pt-0 pt-6 2xl:h-[175px] lg:h-[135px] s:h-[170px]`}>
             {imageUrl ? (
                 <div className="relative justify-center flex w-8 h-8 2xl:w-10 2xl:h-10 ">
                     <Image

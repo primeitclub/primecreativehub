@@ -13,7 +13,7 @@
         <img
           src={src}
           alt={alt}
-          className="w-[20px] sm:w-[24px] md:w-[26px] lg:w-[30px] 2xl:w-[40px] object-contain"
+          className="w-[20px] sm:w-[24px] md:w-[20px] lg:w-[25px] 2xl:w-[35px] object-contain"
         />
       </a>
     );
