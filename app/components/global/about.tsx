@@ -40,7 +40,7 @@ export default function About() {
           </div>
 
           {/* Info + Small Cards Section */}
-          <div className="flex flex-col  2xl:gao-6 w-full lg:w-2/3 h-fit">
+          <div className="flex flex-col  2xl:gap-6 w-full lg:w-2/3 h-fit">
             {/* Heading for mobile */}
             {/* <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-[42px] 2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 leading-12">
               <span className="text-[#0797A0]">Who</span> We Are & <br />
