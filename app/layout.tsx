@@ -3,6 +3,7 @@ import "./styles/globals.css";
 import Navbar from "./components/global/navbar";
 import { Mona_Sans } from "next/font/google";
 import Downfooter from "./components/global/downfooter";
+import ToTopArrow from "./components/global/to_top_arrow";
 
 const monaSans = Mona_Sans({
   subsets: ["latin"],
@@ -55,9 +56,10 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="antialiased">
+      <body className="antialiased relative">
         <Navbar />
         {children}
+        <ToTopArrow  />
         <Downfooter />
       </body>
     </html>
