@@ -14,6 +14,10 @@ interface TeamMember {
   socials: { instagram?: string; github?: string; linkedin?: string };
 }
 
+interface TeamSectionProps {
+  teamData: TeamMember[];
+}
+
 const TEAM: TeamMember[] = Array.from({ length: 9 }).map((_, i) => ({
   id: i + 1,
   name: "Nirjala Shakya",
@@ -23,7 +27,7 @@ const TEAM: TeamMember[] = Array.from({ length: 9 }).map((_, i) => ({
   socials: { instagram: "#", github: "#", linkedin: "#" },
 }));
 
-export default function TeamSection() {
+export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -61,7 +65,7 @@ export default function TeamSection() {
       stop();
       interval = window.setInterval(() => {
         setIndex((prev) => {
-          const next = (prev + 1) % TEAM.length;
+          const next = (prev + 1) % teamData.length;
           scrollToIndex(next);
           return next;
         });
@@ -139,7 +143,7 @@ export default function TeamSection() {
             onTouchStart={() => setPaused(true)}
             onTouchEnd={() => setPaused(false)}
           >
-            {TEAM.map((m) => (
+            {teamData.map((m) => (
               <article
                 key={m.id}
                 className="min-w-full snap-center px-2 "
@@ -204,7 +208,7 @@ export default function TeamSection() {
           </div>
 
           <div className="mt-12 flex justify-center gap-2">
-            {TEAM.map((_, i) => {
+            {teamData.map((_, i) => {
               const active = i === index;
               return (
                 <button
@@ -236,7 +240,7 @@ export default function TeamSection() {
         </div>
 
         <div className="hidden sm:grid pt-12 sm:pt-12 md:pt-16 lg:pt-18 xl:pt-22 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[780px] lg:max-w-[1000px] 2xl:max-w-[1240px] mx-auto gap-6 xl:gap-8 justify-center sm:justify-items-center">
-          {TEAM.map((m) => (
+          {teamData.map((m) => (
             <article
               key={m.id}
               className="group flex flex-col items-center justify-evenly rounded-[8px] bg-[#1C2727] text-white text-center shadow-md ring-1 ring-white/5 border border-[#0797A0] py-4 sm:p-6 md:p-7 lg:px-2 lg:py-8 w-full sm:max-w-[400px]  mx-auto"

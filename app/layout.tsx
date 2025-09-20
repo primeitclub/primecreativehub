@@ -5,6 +5,8 @@ import { Mona_Sans } from "next/font/google";
 import Downfooter from "./components/global/downfooter";
 import ToTopArrow from "./components/global/to_top_arrow";
 
+import Provider from "./components/reactQuery/Provider";
+
 const monaSans = Mona_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -57,9 +59,11 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="antialiased relative">
-        <Navbar />
-        {children}
-        <ToTopArrow  />
+        <Provider>
+            <Navbar />
+              {children}
+            <ToTopArrow/>
+        </Provider>
         <Downfooter />
       </body>
     </html>

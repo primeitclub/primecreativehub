@@ -3,7 +3,9 @@ import Card from "../reusable/card";
 import SmallCard from "../reusable/smallCard";
 import DataFlowConnector from "./DataFlowConnector";
 import SectionHeading from "../reusable/SectionHeading";
+import { useEffect } from "react";
 export default function About() {
+
   return (
     <div
       id="about"
