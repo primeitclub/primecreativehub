@@ -156,7 +156,7 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
                         src={m.image}
                         alt={m.name}
                         fill
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover scale-[1.5] mt-4"
                         priority={m.id <= 4}
                       />
                     </div>
@@ -251,7 +251,7 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
                     src={m.image}
                     alt={m.name}
                     fill
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover scale-[1.5] mt-4"
                     priority={m.id <= 4}
                   />
                 </div>
