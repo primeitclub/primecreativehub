@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <>
-      <div id="home" className="home_container relative h-[100vh] flex flex-col overflow-hidden "
+      <div id="home" className="home_container relative h-[85vh] md:h-[100vh] flex flex-col overflow-hidden "
       >
 
         <div className='bg-grads absolute h-full w-[50%] left-0 top-0 z-10' ></div>
@@ -41,7 +41,7 @@ export default function HeroSection() {
         {/* Infinite Marquee Effect */}
         <div className="absolute 2xl:bottom-0 -bottom-6 left-0 py-6 w-full ">
           <div className="relative z-20">
-            <div className="overflow-hidden py-4 relative mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 w-full">
+            <div className="overflow-hidden py-4 relative md:mt-6 lg:mt-8 xl:mt-10 w-full">
               <motion.div
                 className="flex gap-0 md:gap-24 2xl:gap-50 text-white whitespace-nowrap items-center"
                 style={{ minWidth: "200%", width: "200%" }}

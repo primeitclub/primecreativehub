@@ -6,6 +6,38 @@ import SectionHeading from "../reusable/SectionHeading";
 import { useEffect } from "react";
 export default function About() {
 
+  const fcc = async ()=>{
+    try {
+      const res = await fetch('https://pchapi-dev.primeitclub.com/api/v1/teams/get-latest',{
+        headers:{
+          "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": "true",
+          "Accept": "application/json"
+        }
+      })
+
+      if(!res.ok) throw new Error(await res.text())
+      
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      console.error('Fetch error:', error);
+      throw error;
+    }
+  }
+
+  useEffect( ()=>{
+    const fetchData = async () => {
+      try {
+        const result = await fcc();
+        console.log('this is result ', result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  },[] )
+
   return (
     <div
       id="about"
