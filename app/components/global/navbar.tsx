@@ -5,18 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AnimatedMenuIcon = ({ isOpen }: { isOpen: boolean }) => (
-  <div className="relative w-6 h-6 cursor-pointer">
+  <div className="relative w-5 h-5 cursor-pointer">
     <span
-      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${isOpen ? "top-3 rotate-45" : "top-1"
-        }`}
+      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+        isOpen ? "top-2.5 rotate-45" : "top-1"
+      }`}
     />
     <span
-      className={`absolute left-0 top-3 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${isOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
-        }`}
+      className={`absolute left-0 top-2.5 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+        isOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+      }`}
     />
     <span
-      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${isOpen ? "top-3 -rotate-45" : "top-5"
-        }`}
+      className={`absolute left-0 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+        isOpen ? "top-2.5 -rotate-45" : "top-4"
+      }`}
     />
   </div>
 );
@@ -34,74 +37,121 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed z-50 w-full pt-8 left-1/2 -translate-x-1/2 transition-all duration-300 
-        ${isScrolled
+      className={`fixed z-50 w-full top-0 transition-all duration-300 ${
+        isScrolled
           ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
-          : "bg-transparent border-transparent"
-        }
-        h-[64px] sm:h-[64px] md:h-[72px] lg:h-[104px] px-[5vw] md:px-[10vw]`}
+          : "bg-transparent border-transparent py-2"
+      } h-fit px-[5vw] lg:px-[9vw] xl:px-[12vw] md:px-[8vw]`}
     >
-      {/* Container */}
-      <div className="w-full max-w-[96%] sm:min-w-[640px] md:max-w-[768px] mx-auto lg:max-w-[1024px] xl:max-w-[1280px] flex items-center justify-between gap-8 md:gap-30 -translate-y-4">
-        {/* Logo */}
-        <div className="relative w-[40px] h-[40px] sm:w-[42px] sm:h-[42px] sm:ml-0 md:w-[52px] md:h-[52px] lg:w-[64px] lg:h-[72px]">
-          <Link href="/">
-            <Image
-              src="/images/CreativeHub.png"
-              alt="Logo"
-              fill
-              className="object-contain cursor-pointer"
-            />
-          </Link>
+      <div className="max-w-[1280px] mx-auto h-full flex items-center relative">
+        {/* Mobile view */}
+        <div className="flex items-center justify-between w-full md:hidden">
+          <div className="relative w-[53px] h-[53px] ">
+            <Link href="/">
+              <Image
+                src="/images/CreativeHub.png"
+                alt="Logo"
+                fill
+                className="object-contain cursor-pointer"
+              />
+            </Link>
+          </div>
+          <button
+            className="p-2 mr-2 transition-transform duration-200 hover:scale-110 active:scale-95"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <AnimatedMenuIcon isOpen={isMenuOpen} />
+          </button>
         </div>
 
-        {/* Desktop Nav Items */}
-        <div className="hidden md:flex flex-grow md:justify-around lg:justify-center justify-center gap-8 lg:gap-12">
-          {navItems.map(({ name, href }) => {
-            const isActive = active === name.toLowerCase();
-            return (
-              <Link
-                key={name}
-                href={href}
-                onClick={() => setActive(name.toLowerCase())}
-                className={`relative cursor-pointer px-1 py-1 transition duration-300 text-[18px] md:text-[20px]
-                ${isActive
-                    ? "text-[#F8F8FF] font-semibold after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-[2px] after:bg-cyan-400"
-                    : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
+        {/* Tablet view */}
+        <div className="hidden md:flex lg:hidden w-full items-center justify-between ">
+          {/* Logo */}
+          <div className="relative w-[55px] h-[55px]">
+            <Link href="/">
+              <Image
+                src="/images/CreativeHub.png"
+                alt="Logo"
+                fill
+                className="object-contain cursor-pointer"
+              />
+            </Link>
+          </div>
+
+          {/* Nav items */}
+          <div className="flex gap-17.5">
+            {navItems.map(({ name, href }) => {
+              const isActive = active === name.toLowerCase();
+              return (
+                <Link
+                  key={name}
+                  href={href}
+                  onClick={() => setActive(name.toLowerCase())}
+                  className={`relative cursor-pointer text-[20px] transition-colors duration-300 ${
+                    isActive
+                      ? "text-[#F8F8FF] font-semibold after:absolute after:-bottom-[4px] after:left-0 after:w-full after:h-[2px] after:bg-cyan-400"
+                      : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
                   }`}
-              >
-                {name}
-              </Link>
-            );
-          })}
+                >
+                  {name}
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 -m-2 transition-transform duration-200 hover:scale-110 active:scale-95 mr-6.5"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <AnimatedMenuIcon isOpen={isMenuOpen} />
-        </button>
+        {/* Desktop view */}
+        <div className="hidden lg:flex w-full items-center justify-between">
+          {/* Logo */}
+          <div className="relative 2xl:w-[67px] 2xl:h-[83px] w-[50px] h-[60px]">
+            <Link href="/">
+              <Image
+                src="/images/CreativeHub.png"
+                alt="Logo"
+                fill
+                className="object-contain cursor-pointer"
+              />
+            </Link>
+          </div>
+
+          {/* Nav Items  */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-12">
+            {navItems.map(({ name, href }) => {
+              const isActive = active === name.toLowerCase();
+              return (
+                <Link
+                  key={name}
+                  href={href}
+                  onClick={() => setActive(name.toLowerCase())}
+                  className={`relative cursor-pointer px-1 py-1 transition duration-300 text-[16px] 2xl:text-[20px] ${
+                    isActive
+                      ? "text-[#F8F8FF] font-semibold after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-[2px] after:bg-cyan-400"
+                      : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
+                  }`}
+                >
+                  {name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-20 left-0 right-0 mt-2 md:hidden overflow-hidden transition-all duration-500 ease-out ${isMenuOpen
-          ? "max-h-80 opacity-100 translate-y-0"
-          : "max-h-0 opacity-0 -translate-y-4"
-          }`}
+        className={`absolute top-full left-0 right-0 mt-2 md:hidden overflow-hidden transition-all duration-500 ease-out ${
+          isMenuOpen
+            ? "max-h-80 opacity-100 translate-y-0"
+            : "max-h-0 opacity-0 -translate-y-4"
+        }`}
       >
         <div className="py-6 bg-black/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
           {navItems.map(({ name, href }, index) => {
@@ -114,13 +164,13 @@ export default function Navbar() {
                   setActive(name.toLowerCase());
                   setIsMenuOpen(false);
                 }}
-                className={`block px-8 py-3 transition-all duration-300 text-lg font-medium transform hover:translate-x-2 hover:bg-white/5 ${isActive
-                  ? "text-[#F8F8FF] font-semibold border-l-2 border-cyan-400 "
-                  : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
-                  } ${isMenuOpen
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-4 opacity-0"
-                  }`}
+                className={`block px-8 py-3 transition-all duration-300 text-lg font-medium transform hover:translate-x-2 hover:bg-white/5 ${
+                  isActive
+                    ? "text-[#F8F8FF] font-semibold border-l-2 border-cyan-400"
+                    : "text-[rgba(248,248,255,0.62)] hover:text-[#F8F8FF]"
+                } ${
+                  isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                }`}
                 style={{
                   transitionDelay: isMenuOpen ? `${index * 100}ms` : "0ms",
                 }}
@@ -132,6 +182,7 @@ export default function Navbar() {
         </div>
       </div>
 
+    
       {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden -z-10 transition-opacity duration-300"

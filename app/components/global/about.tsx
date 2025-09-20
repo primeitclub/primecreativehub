@@ -3,51 +3,47 @@ import Card from "../reusable/card";
 import SmallCard from "../reusable/smallCard";
 import DataFlowConnector from "./DataFlowConnector";
 import SectionHeading from "../reusable/SectionHeading";
-
-
+import { useEffect } from "react";
 export default function About() {
+
   return (
-    <div id="about" className="w-full relative py-[8vw] overflow-hidden sm:gap-[191px] m-auto px-4 sm:px-10 lg:px-28">
-      {/* Heading for Small screens */}
-      <div className="flex lg:hidden justify-center mb-12">
-        {/* <h3 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center ">
-          <span className="text-[#0797A0]">Who</span> We Are & <br></br>
-          <span className="text-[#0797A0]">What</span> We Do
-        </h3> */}
-        <SectionHeading
-             text={`Who We Are &\nWhat We Do`}
-             spanIndex={[1, 5]}
-             className="text-[#F8F8FF] text-center"
-             highlightClassName="text-[#0797A0]"
-        />
+    <div
+      id="about"
+      className=" relative py-[80px] sm:py-[14vw] !overflow-x-hidden overflow-visible sm:gap-[191px] m-auto px-4 sm:px-10 lg:px-28"
+    >
+      <div className="lg:max-w-[1028px] 2xl:max-w-[1240px] md:max-w-[766px] mx-auto 2xl:px-0 lg:px-6 md:px-2">
+        {/* Heading for large screens */}
+        <div className="flex lg:hidden justify-center mb-6">
+          <h3 className="text-[24px] md:text-[28px] lg:text-[40px] 2xl:text-[50px] font-extrabold font-mona text-[#F8F8FF] text-center">
+            <span className="text-[#0797A0]">Who</span> We Are & <br></br>
+            <span className="text-[#0797A0]">What</span> We Do
+          </h3>
+        </div>
 
-      </div>
-
-      {/* Responsive main flex layout */}
-  <div className="flex flex-col lg:flex-row items-stretch gap-24 md:gap-18 2xl:gap-28  xl:px-[0] 2xl:px-[8%] py-10 lg:py-0  min-h-[500px]">
-
-        {/* Cards Section */}
-  <div className="w-full lg:w-1/3 ">
-          <div className="relative flex justify-between lg:justify-between items-center lg:flex-col w-full m-auto  h-full" >
-            <Card
-              title="Prime IT Club"
-              imageUrl={assets.ItclubLogo}
-              subtitle="Processing Future"
-              className="relative"
-            />
-            <DataFlowConnector className="scale-[0.6] sm:scale-100 -rotate-90 lg:rotate-0 absolute lg:absolute lg:top-[27%] 2xl:top-[30%] z-[-1]" />
-            <Card
-              title=" Prime Creative Hub"
-              imageUrl={assets.CreativeLogo}
-              className=" relative bottom-[0px] lg:bottom-[0px]"
-              subtitle="Wing of the Prime Club"
-            />
+        {/* Responsive main flex layout */}
+        <div className="flex flex-col lg:flex-row items-stretch gap-16 md:gap-24 xl:gap-34 2xl:gap-4  xl:px-[0]  py-10 lg:py-0  min-h-[500px] justify-between">
+          {/* Cards Section */}
+          <div className="  ">
+            <div className="relative flex justify-between lg:justify-between items-center lg:flex-col w-full m-auto  h-full px-[16px] lg:px-0 md:px-4">
+              <Card
+                title="Prime IT Club"
+                imageUrl={assets.ItclubLogo}
+                subtitle="Processing Future"
+                className="relative"
+              />
+              <DataFlowConnector className="scale-[0.5] sm:scale-[1.2] -rotate-90 lg:rotate-0 absolute lg:absolute lg:top-[27%] 2xl:top-[30%] z-[-1] md:left-0 -left-2" />
+              <Card
+                title=" Prime Creative Hub"
+                imageUrl={assets.CreativeLogo}
+                className=" relative bottom-[0px] lg:bottom-[0px]"
+                subtitle="Wing of the Prime Club"
+              />
+            </div>
           </div>
- </div>
 
-        {/* Info + Small Cards Section */}
-  <div className="flex flex-col gap-2 2xl:gap-4 w-full lg:w-2/3 h-fit 2xl:pr-20 lg:pr-10 md:pr-0">
-          {/* Heading for Large Screen */}
+          {/* Info + Small Cards Section */}
+          <div className="flex flex-col  2xl:gap-2 w-full lg:w-2/3 h-fit">
+            {/* Heading for mobile */}
             {/* <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-[42px] 2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 leading-12">
               <span className="text-[#0797A0]">Who</span> We Are & <br />
               <span className="text-[#0797A0]">What</span> We Do
@@ -55,29 +51,79 @@ export default function About() {
             <SectionHeading
               text={`Who We Are &\nWhat We Do`}
               spanIndex={[1, 5]}
-              className="hidden lg:block mb-4 leading-12 text-left"
+              className="hidden lg:block leading-[1.1] text-left "
             />
 
-            <p className="text-base sm:text-lg  lg:text-lg 2xl:text-xl font-normal text-gray-300">
-              A wing of Prime IT Club, driving innovation through knowledge sharing and collaboration.
+            <p className="text-base sm:text-lg text-center lg:text-start lg:text-lg 2xl:text-xl font-normal text-gray-300 lg:w-[90%]">
+              A wing of Prime IT Club, driving innovation through knowledge
+              sharing and collaboration.
             </p>
 
-          {/* Small Cards Grid */}
-          <div className="2xl:mt-14 lg:mt-10 grid left-0 grid-cols-2 sm:grid-cols-3 gap-8 md:gap-4 md:p-0 p-6">
-            <SmallCard className="" imageUrl={assets.developIcon} title="Develop" />
-            <SmallCard className="" imageUrl={assets.innovateIcon} title="Innovate" />
-            <SmallCard className="" imageUrl={assets.collaborateIcon} title="Collaborate" />
-            <SmallCard className="" imageUrl={assets.workshopIcon} title="WorkShops" />
-            <SmallCard className="" imageUrl={assets.knowledgeIcon} title="Knowledge Sharing" />
-            <SmallCard className="" imageUrl={assets.mentorIcon} title="Mentor" />
+            {/* Small Cards Grid */}
+            <div className="2xl:mt-18 lg:mt-16 mt-8 grid left-0 grid-cols-2 sm:grid-cols-3 gap-4 md:gap-5 md:p-0 sm:p-6 p-4 2xl:pr-[70px]">
+              <SmallCard
+                className=""
+                imageUrl={assets.developIcon}
+                title="Develop"
+              />
+              <SmallCard
+                className=""
+                imageUrl={assets.innovateIcon}
+                title="Innovate"
+              />
+              <SmallCard
+                className=""
+                imageUrl={assets.collaborateIcon}
+                title="Collaborate"
+              />
+              <SmallCard
+                className=""
+                imageUrl={assets.workshopIcon}
+                title="WorkShops"
+              />
+              <SmallCard
+                className=""
+                imageUrl={assets.knowledgeIcon}
+                title="Knowledge Sharing"
+              />
+              <SmallCard
+                className=""
+                imageUrl={assets.mentorIcon}
+                title="Mentor"
+              />
+            </div>
           </div>
-
         </div>
-      </div>
+        
+        <div className="bg-gradient-to-b from-transparent h-[15%] lg:h-[15%]  via-[#020e0f]/80 via-[55%]  to-[#020e0f] absolute inset-0 z-[-12]  backdrop-blur-[32px]"></div>
+        <div className="absolute blurred-bg inset-0 z-[-13] [clip-path:inset(0_0_88%_0)] ">
+          <div className="bg-grads absolute h-full w-[50%] left-0 top-0 z-10 -scale-y-100"></div>
+          <div className="bg-grads  absolute h-full w-[50%] right-0 top-0 z-10 -scale-x-100 -scale-y-100"></div>
+          <div className="bg_top_graident z-10 absolute top-0 left-0 w-full h-full -scale-y-100"></div>
+        </div>
 
-      {/* Background Circle */}
-      <div className="absolute w-56 h-56 left-[-180px] top-[30%] lg:w-96 lg:h-96  m-auto bg-gradient-to-br from-[#0f172a] via-[#0796a044] to-[#0a0f16] rounded-full blur-[950px] -z-10"></div>
-      <div className="absolute w-56 h-56 right-[-220px] top-[20%] lg:w-[400px] lg:h-[460px]  m-auto bg-[#0796a049] rounded-full blur-[1050px] -z-10"></div>
+        {/* <div
+        className="
+    pointer-events-none
+    absolute inset-0
+    z-[-9]
+    bg-white/0
+    backdrop-blur-md
+    [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_85%,rgba(0,0,0,0)_100%)] 
+    [-webkit-mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_85%,rgba(0,0,0,0)_100%)]
+  "
+      />
+
+      <div className="absolute inset-0 z-[-10] [clip-path:inset(0_0_93%_0)]">
+        <div className="bg-grads absolute h-full w-[50%] left-0 top-0 -scale-y-100"></div>
+        <div className="bg-grads absolute h-full w-[50%] right-0 top-0 -scale-x-100 -scale-y-100"></div>
+        <div className="bg_top_graident absolute inset-0 -scale-y-100"></div>
+      </div> */}
+
+        {/* Background Circle */}
+        <div className="absolute w-56 md:h-56 h-82 left-[-180px] md:top-[30%] top-[40%] lg:w-[413px] 2xls:w-[620px] lg:h-[400px]  m-auto bg-[#0796a049] rounded-full 2xl:blur-[200px]  md:blur-[100px] blur-[40px] -z-10"></div>
+        <div className="absolute w-56 md:h-56 h-96 md:right-[-220px] md:top-[15%] right-[-160px] top-[36%] lg:w-[400px] lg:h-[460px] 2xl:w-[650px] 2xl:h-[750px] md:opacity-60 m-auto bg-[#0796a049] rounded-full 2xl:blur-[100px]  md:blur-[100px] blur-[40px] -z-10"></div>
+      </div>
     </div>
   );
 }
