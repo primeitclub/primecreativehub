@@ -14,12 +14,12 @@ export default function Downfooter() {
 
           />
           <SocialIcon
-            href="https://github.com/"
+            href="https://github.com/primeitclub"
             src="/images/github.svg"
             alt="GitHub"
           />
           <SocialIcon
-            href="https://linkedin.com/company/itclub"
+            href="https://www.linkedin.com/in/prime-creative-hub/"
             src="/images/linkden.svg"
             alt="LinkedIn"
           />

@@ -6,37 +6,42 @@ import SectionHeading from "../reusable/SectionHeading";
 import { useEffect } from "react";
 export default function About() {
 
-  const fcc = async ()=>{
-    try {
-      const res = await fetch('https://pchapi-dev.primeitclub.com/api/v1/teams/get-latest',{
-        headers:{
-          "Content-Type": "application/json",
-          "ngrok-skip-browser-warning": "true",
-          "Accept": "application/json"
-        }
-      })
+  // const fcc = async ()=>{
+  //   try {
+  //     const res = await fetch('https://pchapi-dev.primeitclub.com/api/v1/teams/get-latest',{
+  //       headers:{
+  //         "Content-Type": "application/json",
+  //         "ngrok-skip-browser-warning": "true",
+  //         "Accept": "application/json"
+  //       }
+  //     })
 
-      if(!res.ok) throw new Error(await res.text())
+  //     if(!res.ok) throw new Error(await res.text())
       
-      const data = await res.json();
-      return data;
-    } catch (error) {
-      console.error('Fetch error:', error);
-      throw error;
-    }
-  }
+  //     const data = await res.json();
+  //     return data;
+  //   } catch (error) {
+  //     console.error('Fetch error:', error);
+  //     throw error;
+  //   }
+  // }
 
-  useEffect( ()=>{
-    const fetchData = async () => {
-      try {
-        const result = await fcc();
-        console.log('this is result ', result);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-  },[] )
+  // useEffect( ()=>{
+
+  //   const res = fcc();
+
+  //   console.log('this is res',res);
+
+  //   const fetchData = async () => {
+  //     try {
+  //       const result = await fcc();
+  //       console.log('this is result ', result);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+  //   fetchData();
+  // },[] )
 
   return (
     <div
@@ -45,7 +50,7 @@ export default function About() {
     >
       <div className="lg:max-w-[1028px] 2xl:max-w-[1240px] md:max-w-[766px] mx-auto 2xl:px-0 lg:px-6 md:px-2">
         {/* Heading for large screens */}
-        <div className="flex lg:hidden justify-center mb-6">
+        <div className="flex md:hidden justify-center mb-6">
           <h3 className="text-[24px] md:text-[28px] lg:text-[40px] 2xl:text-[50px] font-extrabold font-mona text-[#F8F8FF] text-center">
             <span className="text-[#0797A0]">Who</span> We Are & <br></br>
             <span className="text-[#0797A0]">What</span> We Do
@@ -53,17 +58,17 @@ export default function About() {
         </div>
 
         {/* Responsive main flex layout */}
-        <div className="flex flex-col lg:flex-row items-stretch gap-16 md:gap-24 xl:gap-34 2xl:gap-4  xl:px-[0]  py-10 lg:py-0  min-h-[500px] justify-between">
+        <div className="flex flex-col md:flex-row items-stretch gap-16 md-gap-16 lg:gap-24 xl:gap-34 2xl:gap-4  xl:px-[0]  py-10 lg:py-0  min-h-[500px] justify-between">
           {/* Cards Section */}
           <div className="  ">
-            <div className="relative flex justify-between lg:justify-between items-center lg:flex-col w-full m-auto  h-full px-[16px] lg:px-0 md:px-4">
+            <div className="relative flex justify-between lg:justify-between items-center md:flex-col w-full m-auto  h-full px-[16px] lg:px-0 md:px-4">
               <Card
                 title="Prime IT Club"
                 imageUrl={assets.ItclubLogo}
                 subtitle="Processing Future"
                 className="relative"
               />
-              <DataFlowConnector className="scale-[0.5] sm:scale-[1.2] -rotate-90 lg:rotate-0 absolute lg:absolute lg:top-[27%] 2xl:top-[30%] z-[-1] md:left-0 -left-2" />
+              <DataFlowConnector className="scale-[0.5] md:scale-[1.2] -rotate-90 md:rotate-0 absolute lg:absolute lg:top-[27%] md:top-[22%] 2xl:top-[30%] z-[-1] md:left-0 -left-2" />
               <Card
                 title=" Prime Creative Hub"
                 imageUrl={assets.CreativeLogo}
@@ -74,7 +79,7 @@ export default function About() {
           </div>
 
           {/* Info + Small Cards Section */}
-          <div className="flex flex-col  2xl:gap-2 w-full lg:w-2/3 h-fit">
+          <div className="flex flex-col 2xl:gap-2 w-full lg:w-2/3 h-fit">
             {/* Heading for mobile */}
             {/* <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-[42px] 2xl:text-[48px] font-bold text-[#F8F8FF] mb-4 leading-12">
               <span className="text-[#0797A0]">Who</span> We Are & <br />
@@ -83,10 +88,10 @@ export default function About() {
             <SectionHeading
               text={`Who We Are &\nWhat We Do`}
               spanIndex={[1, 5]}
-              className="hidden lg:block leading-[1.1] text-left "
+              className="hidden md:block leading-[1.1] text-left "
             />
 
-            <p className="text-base sm:text-lg text-center lg:text-start lg:text-lg 2xl:text-xl font-normal text-gray-300 lg:w-[90%]">
+            <p className="text-base sm:text-lg md:text-sm text-center md:text-start lg:text-lg 2xl:text-xl font-normal text-gray-300 lg:w-[90%]">
               A wing of Prime IT Club, driving innovation through knowledge
               sharing and collaboration.
             </p>

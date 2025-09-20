@@ -62,13 +62,15 @@ export default function History() {
     description: item.description,
   })) : defaultTimelineEvents;
 
-  if (isLoading) {
-    return <div>Loading history...</div>;
-  }
+  console.log('history data',data,error);
 
-  if (error) {
-    return <div>Error loading history data</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading history...</div>;
+  // }
+
+  // if (error) {
+  //   return <div>Error loading history data</div>;
+  // }
 
   return (
     <section id="history" className="py-12 px-4 max-w-6xl mx-auto">
@@ -76,7 +78,7 @@ export default function History() {
         text="How We Got Here"
         spanIndex={1}
       />
-      <Timeline events={transformedData} />
+      <Timeline events={defaultTimelineEvents} />
     </section>
   );
 }
