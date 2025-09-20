@@ -8,7 +8,13 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <>
-      <div id="home" className="home_container relative h-[85vh] md:h-[100vh] flex flex-col overflow-hidden "
+      <div 
+        id="home" 
+        className="home_container relative flex flex-col overflow-hidden"
+        style={{
+          minHeight: '-webkit-fill-available',
+          height: '100dvh', // For modern browsers with fallback
+        }}
       >
 
         <div className='bg-grads absolute h-full w-[50%] left-0 top-0 z-10' ></div>

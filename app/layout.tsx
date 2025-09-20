@@ -56,9 +56,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={monaSans.variable}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
       </head>
-      <body className="antialiased relative">
+      <body 
+        className="antialiased relative"
+        style={{
+          minHeight: '-webkit-fill-available',
+          WebkitTextSizeAdjust: '100%',
+        }}
+      >
         <Provider>
             <Navbar />
               {children}

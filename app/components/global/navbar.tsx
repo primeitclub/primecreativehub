@@ -37,18 +37,28 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 10;
+      setIsScrolled(scrolled);
+    };
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed z-50 w-full transition-all duration-300 ${
+      className={`fixed bg-black/20 backdrop-blur-sm top-0 left-0 right-0 z-50 w-full h-fit px-[5vw] lg:px-[9vw] xl:px-[12vw] md:px-[8vw] ${
         isScrolled
-          ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
-          : "bg-transparent border-transparent py-2"
-      } h-fit px-[5vw] lg:px-[9vw] xl:px-[12vw] md:px-[8vw]`}
+          ? "navbar-scrolled "
+          : "navbar-transparent"
+      }`}
+      style={{
+        paddingTop: 'env(safe-area-inset-top)',
+        WebkitTransform: 'translateZ(0)',
+        transform: 'translateZ(0)',
+        transition: 'all 0.3s ease-in-out',
+      }}
     >
       <div className="max-w-[1280px] mx-auto h-full flex items-center relative">
         {/* Mobile view */}
@@ -153,7 +163,7 @@ export default function Navbar() {
             : "max-h-0 opacity-0 -translate-y-4"
         }`}
       >
-        <div className="py-6 bg-black/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
+        <div className="py-6 bg-black/95 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
           {navItems.map(({ name, href }, index) => {
             const isActive = active === name.toLowerCase();
             return (
