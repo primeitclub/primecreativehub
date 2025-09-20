@@ -22,7 +22,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
 
   return (
     <h2
-      className={`text-[20px] md:text-[28px] lg:text-[40px] 2xl:text-[50px] font-bold mb-4 text-center ${className}`}
+      className={`text-[24px] md:text-[28px] lg:text-[40px] 2xl:text-[50px] font-bold mb-4 text-center ${className}`}
     >
       {lines.map((line, lineIdx) => {
         const words = line.trim().split(" ");
