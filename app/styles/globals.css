@@ -9,6 +9,66 @@
 
 html {
   scroll-behavior: smooth;
+  /* iOS safe area support */
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Dynamic viewport height for iOS */
+@supports (height: 100dvh) {
+  html, body {
+    height: 100dvh;
+  }
+  .home_container {
+    height: 100dvh !important;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    height: -webkit-fill-available;
+    overflow-x: hidden;
+  }
+  
+  .home_container {
+    height: -webkit-fill-available !important;
+    min-height: -webkit-fill-available !important;
+  }
+  
+  /* Fixed positioning for iOS */
+  nav[class*="fixed"] {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+  }
+}
+
+/* Prevent iOS zoom on input focus */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* General viewport fixes */
+.min-h-screen {
+  min-height: -webkit-fill-available;
+}
+
+/* Navbar scroll states */
+.navbar-transparent {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 body,
@@ -181,14 +241,9 @@ nav {
 }
 
 .bg-grads {
-  background: conic-gradient(
-    from 0.25turn at 54% 85%,
-    #00000081,
-    157deg,
-    #00b4b43d,
-    352deg,
-    #00b4b4
-  );
+  background: conic-gradient( from 0.25turn at 54% 85%, #00000082, 157deg, #00ffff3d, 352deg, #00f3ff )
+  /* background:conic-gradient(from 0.25turn at 54% 85%, #00000081, 157deg, #019b9b85, 340deg, #009393, 352deg, #00f3ff) */
+
 }
 
 .bg_top_graident {
@@ -197,6 +252,26 @@ nav {
     rgba(2, 14, 15, 1) 1%,
     rgba(21, 21, 20, 0.18) 100%
   );
+}
+
+@media screen and (max-width:768px) {
+  .bg-grads {
+  background: conic-gradient( from 0.25turn at 34% 78%, #00000082, 205deg, #00ffff3d, 323deg, #00f3ff );
+  /* background:conic-gradient(from 0.25turn at 54% 85%, #00000081, 157deg, #019b9b85, 340deg, #009393, 352deg, #00f3ff) */
+
+}
+}
+
+.blurred-bg {
+  mask: linear-gradient(black, black);
+  backdrop-filter: blur(10px);
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* conic-gradient( from 0.25turn at 54% 85%, #00000081, 87deg, #1b6f9336, 343deg, #11bae1 ) */

@@ -41,7 +41,7 @@ export default function DataFlowConnector({
   const glowId = `glow-${uniqueId}`
 
   return (
-    <div className={`base:scale-[0.6] sm:scale-unset w-full overflow-hidden ${className}`} style={containerStyle}>
+    <div className={`base:scale-[0.3] sm:scale-unset w-full overflow-hidden ${className}`} style={containerStyle}>
       {/* Flowing Lines SVG */}
       <svg className="absolute inset-0 w-full h-full" viewBox={`0 0 400 ${height}`}>
         <defs>

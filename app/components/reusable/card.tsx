@@ -12,10 +12,10 @@ type CardProps = {
 
 export default function Card({ title, subtitle, imageUrl, className,  }: CardProps) {
   return (
-  <div className={`${className} relative w-[34vw] sm:w-[30vw] lg:w-[220px] 2xl:w-[270px]`} >
+  <div className={`${className} relative w-[34vw] sm:w-[30vw] md:w-[180px] lg:w-[220px] 2xl:w-[270px]`} >
       <div
-        className={`group flex gap-[12px] md:gap-[30px] sm:flex-col flex-col items-center justify-center m-auto sm:w-full sm:h-full  relative overflow-hidden border border-[#0797A0] bg-[#1C2727] backdrop-blur-sm
-      rounded-[16px] py-[16px] 2xl:py-[25px] `}
+        className={`group flex gap-[12px] md:gap-[16px] lg:gap-[30px] sm:flex-col flex-col items-center justify-center m-auto sm:w-full sm:h-full  relative overflow-hidden border border-[#0797A0] bg-[#1C2727] backdrop-blur-sm
+      rounded-[16px] py-[6px] md:py-2 lg:py-[16px] 2xl:py-[25px] `}
       >
         {imageUrl && (
           <div className="relative flex w-auto h-auto  overflow-hidden">
