@@ -48,7 +48,7 @@ export default function Navbar() {
         isScrolled
           ? "bg-white/5 backdrop-blur-md border border-white/30 shadow-lg"
           : "bg-transparent border-transparent py-2"
-      } h-fit px-[5vw] lg:px-[12vw] md:px-[8vw]`}
+      } h-fit px-[5vw] lg:px-[9vw] xl:px-[12vw] md:px-[8vw]`}
     >
       <div className="max-w-[1280px] mx-auto h-full flex items-center relative">
         {/* Mobile view */}

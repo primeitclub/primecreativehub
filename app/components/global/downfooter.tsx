@@ -1,14 +1,12 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-// import SocialIcons from "../reusable/soical-icons";
 import SocialIcon from "../reusable/soical-icons";
 export default function Downfooter() {
   return (
-    <div className="text-center gap-0 flex max-w-[1920px] mt-7 flex-col relative items-center">
+    <div className="text-center gap-0 flex max-w-[1920px] mt-24 md:mt-38 2xl:mt-64 flex-col relative items-center">
       {/* <div className='w-full h-full absolute bg-[linear-gradient(180deg,#295D60_3.43%,#23C6C6_50.61%,#295D60_99.78%)]  z-10  '></div> */}
       <div className="text-white w-full mt-3">
-        <div className="flex flex-row justify-center gap-4 sm:gap-5 md:gap-7 lg:gap-8  xl:gap-10 p-2">
+        <div className="flex flex-row justify-center gap-4 sm:gap-5 md:gap-7 lg:gap-8  xl:gap-10">
           <SocialIcon 
             href="https://instagram.com/primeitclub"
             src="/images/insta.svg"
@@ -28,7 +26,7 @@ export default function Downfooter() {
         </div>
 
         {/* Wrapper for text + fade overlay */}
-        <div className=" flex flex-col relative items-center  ">
+        <div className=" flex flex-col relative items-center  mt-8">
           {/* sm:text-[60px] md:text-[95px] lg:text-[160px] xl:text-[175px] */}
           <h1
             className="whitespace-nowrap  

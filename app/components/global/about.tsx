@@ -9,10 +9,10 @@ export default function About() {
       id="about"
       className=" relative py-[80px] sm:py-[14vw] !overflow-x-hidden overflow-visible sm:gap-[191px] m-auto px-4 sm:px-10 lg:px-28"
     >
-      <div className="lg:max-w-[1028px] 2xl:max-w-[1240px] md:max-w-[766px] mx-auto 2xl:px-0 xl:px-10 md:px-2">
+      <div className="lg:max-w-[1028px] 2xl:max-w-[1240px] md:max-w-[766px] mx-auto 2xl:px-0 lg:px-6 md:px-2">
         {/* Heading for large screens */}
         <div className="flex lg:hidden justify-center mb-6">
-          <h3 className="text-[24px] sm:text-[28px] md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-mona text-[#F8F8FF] text-center">
+          <h3 className="text-[24px] md:text-[28px] lg:text-[40px] 2xl:text-[50px] font-extrabold font-mona text-[#F8F8FF] text-center">
             <span className="text-[#0797A0]">Who</span> We Are & <br></br>
             <span className="text-[#0797A0]">What</span> We Do
           </h3>
