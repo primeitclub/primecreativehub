@@ -62,7 +62,6 @@ export default function History() {
     description: item.description,
   })) : defaultTimelineEvents;
 
-  console.log('history data',data,error);
 
   // if (isLoading) {
   //   return <div>Loading history...</div>;
@@ -78,7 +77,7 @@ export default function History() {
         text="How We Got Here"
         spanIndex={1}
       />
-      <Timeline events={defaultTimelineEvents} />
+      <Timeline events={transformedData} />
     </section>
   );
 }
