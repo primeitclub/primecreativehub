@@ -241,7 +241,7 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
           {teamData.map((m) => (
             <article
               key={m.id}
-              className="group flex flex-col items-center justify-evenly rounded-[8px] bg-[#1C2727] text-white text-center shadow-md ring-1 ring-white/5 border border-[#0797A0] py-4 sm:p-6 md:p-7 lg:px-2 lg:py-8 w-full sm:max-w-[400px]  mx-auto hover:scale-[1.05] transition-transform duration-300 ease-in-out"
+              className="group flex flex-col items-center justify-evenly rounded-[8px] bg-[#1C2727] text-white text-center shadow-md ring-1 ring-white/5 border border-[#0797A0] py-4 sm:p-6 md:p-7 lg:px-2 lg:py-8 w-full sm:max-w-[400px]  mx-auto hover:scale-[1.05] transition-transform duration-300 ease-in-out "
             >
               <div className="relative mb-2 sm:mb-5 md:mb-7 lg:mb-10 xl:mb-10 2xl:mb-14 ">
                 <div className="relative h-24 w-24 sm:h-24 sm:w-24 md:h-25 md:w-25 lg:h-40 lg:w-40 2xl:h-[220px] 2xl:w-[220px] overflow-hidden rounded-full ring-2 ring-white/20">
