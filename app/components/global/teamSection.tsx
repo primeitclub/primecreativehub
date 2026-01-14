@@ -120,10 +120,8 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
   }, []);
 
   return (
-    <section id="team"  className="relative py-10 sm:py-12 md:py-16 lg:py-20">
-      <div
-        className="relative mx-auto w-full 2xl:px-[17%] md:px-[8vw] lg:px-[8vw] px-[10%]"
-      >
+    <section id="team" className="relative py-10 sm:py-12 md:py-16 lg:py-20">
+      <div className="relative mx-auto w-full 2xl:px-[17%] md:px-[8vw] lg:px-[8vw] px-[10%]">
         <div
           aria-hidden
           className="pointer-events-none absolute left-1/2 top-[56%] -z-10 -translate-x-1/2 -translate-y-1/2 h-[320px] w-[320px] blur-[160px] sm:h-[420px] sm:w-[620px] sm:blur-[200px] md:h-[520px] md:w-[820px] md:blur-[240px] lg:h-[620px] lg:w-[1080px] lg:blur-[280px] xl:min-w-[500px] sm:min-w[126px] bg-[#146B61]/80 rounded-full"
@@ -162,46 +160,46 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
                     </div>
                   </div>
 
-                 <div className="flex flex-1 flex-col items-center gap-1">
-                <h3 className="text-xl md:text-base lg:text-xl xl:text-[26px] 2xl:text-3xl">
-                  {m.name}
-                </h3>
-                <p className="mt-1 text-sm md:text-xs lg:text-base xl:text-[16px] font-medium 2xl:text-xl text-white/90">
-                  {m.role}
-                </p>
-                <p className="italic mt-0.5 text-[12px] sm:text[14px] md:text-[10px] lg:text-xs xl:text-base 2xl:text-base text-white/70">
-                  {m.subRole}
-                </p>
-                <div className="mt-4 flex items-center gap-2 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-8">
-                  <a
-                    href={m.socials.instagram ?? "#"}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#0797A0] "
-                    aria-label={`${m.name} on Instagram`}
-                  >
-                    <BiLogoInstagramAlt className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
-                  </a>
-                  <a
-                    href={m.socials.github ?? "#"}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#0797A0] "
-                    aria-label={`${m.name} on GitHub`}
-                  >
-                    <FaGithub className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
-                  </a>
-                  <a
-                    href={m.socials.linkedin ?? "#"}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#0797A0]"
-                    aria-label={`${m.name} on LinkedIn`}
-                  >
-                    <FaLinkedin className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
-                  </a>
-                </div>
-              </div>
+                  <div className="flex flex-1 flex-col items-center gap-1">
+                    <h3 className="text-xl md:text-base lg:text-xl xl:text-[26px] 2xl:text-3xl">
+                      {m.name}
+                    </h3>
+                    <p className="mt-1 text-sm md:text-xs lg:text-base xl:text-[16px] font-medium 2xl:text-xl text-white/90">
+                      {m.role}
+                    </p>
+                    <p className="italic mt-0.5 text-[12px] sm:text[14px] md:text-[10px] lg:text-xs xl:text-base 2xl:text-base text-white/70">
+                      {m.subRole}
+                    </p>
+                    <div className="mt-4 flex items-center gap-2 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-8">
+                      <a
+                        href={m.socials.instagram ?? "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#0797A0] "
+                        aria-label={`${m.name} on Instagram`}
+                      >
+                        <BiLogoInstagramAlt className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
+                      </a>
+                      <a
+                        href={m.socials.github ?? "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#0797A0] "
+                        aria-label={`${m.name} on GitHub`}
+                      >
+                        <FaGithub className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
+                      </a>
+                      <a
+                        href={m.socials.linkedin ?? "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#0797A0]"
+                        aria-label={`${m.name} on LinkedIn`}
+                      >
+                        <FaLinkedin className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </article>
             ))}
@@ -239,13 +237,13 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
           </div>
         </div>
 
-        <div className="hidden sm:grid pt-12 sm:pt-12 md:pt-16 lg:pt-18 xl:pt-22 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[780px] lg:max-w-[1000px] 2xl:max-w-[1240px] mx-auto gap-6 xl:gap-8 justify-center sm:justify-items-center">
+        <div className="hidden sm:grid pt-12 sm:pt-12 md:pt-16 lg:pt-18 xl:pt-22 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[780px] lg:max-w-[1000px] 2xl:max-w-[1240px] mx-auto gap-6 xl:gap-8 justify-center sm:justify-items-center ">
           {teamData.map((m) => (
             <article
               key={m.id}
-              className="group flex flex-col items-center justify-evenly rounded-[8px] bg-[#1C2727] text-white text-center shadow-md ring-1 ring-white/5 border border-[#0797A0] py-4 sm:p-6 md:p-7 lg:px-2 lg:py-8 w-full sm:max-w-[400px]  mx-auto"
+              className="group flex flex-col items-center justify-evenly rounded-[8px] bg-[#1C2727] text-white text-center shadow-md ring-1 ring-white/5 border border-[#0797A0] py-4 sm:p-6 md:p-7 lg:px-2 lg:py-8 w-full sm:max-w-[400px]  mx-auto hover:scale-[1.05] transition-transform duration-300 ease-in-out "
             >
-              <div className="relative mb-2 sm:mb-5 md:mb-7 lg:mb-10 xl:mb-10 2xl:mb-14">
+              <div className="relative mb-2 sm:mb-5 md:mb-7 lg:mb-10 xl:mb-10 2xl:mb-14 ">
                 <div className="relative h-24 w-24 sm:h-24 sm:w-24 md:h-25 md:w-25 lg:h-40 lg:w-40 2xl:h-[220px] 2xl:w-[220px] overflow-hidden rounded-full ring-2 ring-white/20">
                   <Image
                     src={m.image}
@@ -271,7 +269,7 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
                     href={m.socials.instagram ?? "#"}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#0797A0] "
+                    className="text-[#0797A0] hover:text-[#1eb5c0]"
                     aria-label={`${m.name} on Instagram`}
                   >
                     <BiLogoInstagramAlt className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
@@ -280,7 +278,7 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
                     href={m.socials.github ?? "#"}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#0797A0] "
+                    className="text-[#0797A0] hover:text-[#1eb5c0]"
                     aria-label={`${m.name} on GitHub`}
                   >
                     <FaGithub className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
@@ -289,7 +287,7 @@ export default function TeamSection({ teamData = TEAM }: TeamSectionProps) {
                     href={m.socials.linkedin ?? "#"}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#0797A0]"
+                    className="text-[#0797A0] hover:text-[#1eb5c0]"
                     aria-label={`${m.name} on LinkedIn`}
                   >
                     <FaLinkedin className="h-6 w-6 md:h-6 md:w-6 lg:w-8 lg:h-8" />
